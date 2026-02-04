@@ -1,0 +1,9 @@
+# Robots.txt for unsalaslan.me
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://unsalaslan.me/sitemap.xml
+
+# Disallow certain paths if needed
+# Disallow: /private/
