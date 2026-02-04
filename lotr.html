@@ -28,12 +28,9 @@
 
     <main>
         <!-- Hero - Chronicle Card -->
-        <section>
+        <section class="hero-section">
             <div class="chronicle-card">
-                <p
-                    style="text-align: center; color: var(--lotr-copper); font-size: 0.9rem; letter-spacing: 3px; margin-bottom: 1rem;">
-                    ✦ CHRONICLES OF THE DIGITAL REALM ✦
-                </p>
+                <p class="chronicle-label">✦ CHRONICLES OF THE DIGITAL REALM ✦</p>
                 <h1 class="chronicle-title">Ünsal Aslan</h1>
                 <p class="chronicle-subtitle">Ranger of the Code • Keeper of Forty Realms • XVII Ages of Service</p>
 
@@ -61,22 +58,18 @@
                     </div>
                 </div>
 
-                <div
-                    style="display: flex; justify-content: space-around; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
-                    <div style="text-align: center;">
-                        <div style="font-family: var(--font-display); font-size: 1.75rem; color: var(--lotr-gold);">40+
-                        </div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">Realms Defended</div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-desc">Realms Defended</div>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="font-family: var(--font-display); font-size: 1.75rem; color: var(--lotr-gold);">XVII
-                        </div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">Ages of Journey</div>
+                    <div class="stat-item">
+                        <div class="stat-number">XVII</div>
+                        <div class="stat-desc">Ages of Journey</div>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="font-family: var(--font-display); font-size: 1.75rem; color: var(--lotr-gold);">III
-                        </div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">Ancient Scrolls</div>
+                    <div class="stat-item">
+                        <div class="stat-number">III</div>
+                        <div class="stat-desc">Ancient Scrolls</div>
                     </div>
                 </div>
             </div>
@@ -85,11 +78,11 @@
         <!-- Quote -->
         <div class="quote-block">
             <p class="quote-text">"Not all those who wander are lost... but I do know my way around a codebase."</p>
-            <p class="quote-author">— Adapted from the words of Gandalf</p>
+            <p class="quote-author">— Adapted from the words of Gandalf the Grey</p>
         </div>
 
         <!-- Journey Timeline -->
-        <section class="section">
+        <section class="section" id="journey">
             <div class="section-header">
                 <div class="section-divider">
                     <span class="section-ornament">❧</span>
@@ -99,49 +92,67 @@
             </div>
 
             <div class="journey-scroll">
-                <div class="journey-entry">
-                    <span class="journey-era">◆ THE CURRENT AGE • 2020 - Present</span>
-                    <h3 class="journey-title">Steward of the White Tower</h3>
-                    <p class="journey-location">Istanbul University • The Great Citadel</p>
-                    <p class="journey-desc">
-                        Commanding the defense of forty realms (enterprise systems). Training young rangers in the
-                        ancient arts of clean code and architectural wisdom.
-                    </p>
-                </div>
-
-                <div class="journey-entry">
+                <div class="journey-entry legendary">
                     <span class="journey-era">◆ THE AGE OF COMMERCE • 2024 - Present</span>
                     <h3 class="journey-title">Lord of the Trade Routes</h3>
                     <p class="journey-location"><a href="https://www.d-s28.com" target="_blank"
-                            style="color: var(--lotr-gold);">d-s28.com</a> • The Merchant Kingdoms</p>
-                    <p class="journey-desc">
-                        CTO & Co-Founder. Forging new paths of commerce across the digital realm.
-                    </p>
+                            class="lotr-link">d-s28.com</a> • The Merchant Kingdoms</p>
+                    <p class="journey-desc">CTO & Co-Founder. Forging new paths of commerce across the digital realm.
+                        Building a trade empire that spans all of Middle-net.</p>
+                    <div class="journey-tags">
+                        <span class="tag">E-Commerce</span>
+                        <span class="tag">Architecture</span>
+                        <span class="tag">Leadership</span>
+                    </div>
+                    <div class="journey-progress">
+                        <div class="progress-bar" style="width: 30%"></div>
+                        <span class="progress-text">30% of the Quest</span>
+                    </div>
+                </div>
+
+                <div class="journey-entry active">
+                    <span class="journey-era">◆ THE CURRENT AGE • 2020 - Present</span>
+                    <h3 class="journey-title">Steward of the White Tower</h3>
+                    <p class="journey-location">Istanbul University • The Great Citadel</p>
+                    <p class="journey-desc">Commanding the defense of forty realms (enterprise systems). Training young
+                        rangers in the ancient arts of clean code. Protecting the kingdom from the dark forces of bugs
+                        and technical debt.</p>
+                    <div class="journey-tags">
+                        <span class="tag">Tech Lead</span>
+                        <span class="tag">40+ Realms</span>
+                        <span class="tag">Architecture</span>
+                    </div>
                 </div>
 
                 <div class="journey-entry">
                     <span class="journey-era">◆ THE FELLOWSHIP ERA • 2015 - 2020</span>
                     <h3 class="journey-title">Captain of the Fellowship</h3>
                     <p class="journey-location">Development Guilds • Various Kingdoms</p>
-                    <p class="journey-desc">
-                        Led great fellowships of developers through perilous projects. Established the ancient codes of
-                        best practices.
-                    </p>
+                    <p class="journey-desc">Led great fellowships of developers through perilous projects. Established
+                        the ancient codes of best practices. Forged bonds that would last through many trials.</p>
+                    <div class="journey-tags">
+                        <span class="tag">Team Lead</span>
+                        <span class="tag">Agile</span>
+                        <span class="tag">Mentoring</span>
+                    </div>
                 </div>
 
                 <div class="journey-entry">
-                    <span class="journey-era">◆ THE FIRST AGE • 2008 - 2010</span>
+                    <span class="journey-era">◆ THE FIRST AGE • 2008</span>
                     <h3 class="journey-title">The Awakening</h3>
                     <p class="journey-location">Enko Teknik • The Northern Reaches of Sakarya</p>
-                    <p class="journey-desc">
-                        In the beginning, there was code. First steps on a journey that would span seventeen ages.
-                    </p>
+                    <p class="journey-desc">In the beginning, there was code. First steps on a journey that would span
+                        seventeen ages. The spark of creation was kindled, and thus began the great adventure.</p>
+                    <div class="journey-tags">
+                        <span class="tag">First Code</span>
+                        <span class="tag">Origin</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Powers of the Realm -->
-        <section class="section">
+        <section class="section" id="powers">
             <div class="section-header">
                 <div class="section-divider">
                     <span class="section-ornament">⚔</span>
@@ -155,48 +166,224 @@
                     <div class="power-icon">⚡</div>
                     <h3 class="power-name">The Art of Interfaces</h3>
                     <p class="power-rank">Grand Master</p>
-                    <p class="power-skills">React • TypeScript • Vue.js • Angular • The Ancient HTML Scrolls</p>
+                    <div class="power-bar">
+                        <div class="power-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>React</span><span>TypeScript</span><span>Vue.js</span><span>Angular</span><span>Next.js</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">🔮</div>
                     <h3 class="power-name">The Dark Arts of Backend</h3>
                     <p class="power-rank">Wizard Level</p>
-                    <p class="power-skills">Node.js • .NET • Java • Python • REST Incantations</p>
+                    <div class="power-bar">
+                        <div class="power-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>Node.js</span><span>.NET Core</span><span>Java</span><span>Python</span><span>REST
+                            APIs</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">📱</div>
                     <h3 class="power-name">The Craft of Palantíri</h3>
                     <p class="power-rank">Master Craftsman</p>
-                    <p class="power-skills">Swift • iOS • React Native • Flutter</p>
+                    <div class="power-bar">
+                        <div class="power-fill" style="width: 80%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>Swift</span><span>iOS</span><span>React Native</span><span>Flutter</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">☁️</div>
                     <h3 class="power-name">The Valar's Domain</h3>
                     <p class="power-rank">Cloud Walker</p>
-                    <p class="power-skills">AWS • Azure • Docker • Kubernetes</p>
+                    <div class="power-bar">
+                        <div class="power-fill" style="width: 90%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>AWS</span><span>Azure</span><span>Docker</span><span>Kubernetes</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">🗄️</div>
                     <h3 class="power-name">The Keeper of Records</h3>
                     <p class="power-rank">Lore Master</p>
-                    <p class="power-skills">PostgreSQL • MongoDB • Redis • SQL Server</p>
+                    <div class="power-bar">
+                        <div class="power-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>SQL Server</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">👑</div>
                     <h3 class="power-name">The Art of Command</h3>
                     <p class="power-rank">High King</p>
-                    <p class="power-skills">Team Leadership • Agile Councils • Mentoring Young Rangers</p>
+                    <div class="power-bar">
+                        <div class="power-fill gold" style="width: 100%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>Leadership</span><span>Agile</span><span>Mentoring</span><span>Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kingdoms Defended (40+ İÜ Projects) -->
+        <section class="section" id="kingdoms">
+            <div class="section-header">
+                <div class="section-divider">
+                    <span class="section-ornament">🏰</span>
+                </div>
+                <h2 class="section-title">Kingdoms Defended</h2>
+                <p class="section-subtitle">40+ Realms Under Protection of the Ranger</p>
+            </div>
+
+            <div class="kingdoms-grid">
+                <div class="kingdom-card">
+                    <h3 class="kingdom-name">🎓 The Academic Realm</h3>
+                    <div class="kingdom-fortresses">
+                        <span class="fortress">OBS V2</span>
+                        <span class="fortress">AKSİS</span>
+                        <span class="fortress">Başvuru Sistemi</span>
+                        <span class="fortress">PBYS</span>
+                        <span class="fortress">Yabancı Öğrenci</span>
+                        <span class="fortress">Online Sınav</span>
+                        <span class="fortress">Üniversite Tanıtım</span>
+                    </div>
+                </div>
+
+                <div class="kingdom-card">
+                    <h3 class="kingdom-name">👥 The Personnel Domain</h3>
+                    <div class="kingdom-fortresses">
+                        <span class="fortress">Personel Portal</span>
+                        <span class="fortress">IDM</span>
+                        <span class="fortress">PDKS</span>
+                        <span class="fortress">BAP</span>
+                        <span class="fortress">Puantaj</span>
+                        <span class="fortress">İzin Takip</span>
+                    </div>
+                </div>
+
+                <div class="kingdom-card">
+                    <h3 class="kingdom-name">🔐 The Security Fortress</h3>
+                    <div class="kingdom-fortresses">
+                        <span class="fortress legendary">SSO-İU GİRİŞ</span>
+                        <span class="fortress">E-Devlet Entegrasyon</span>
+                        <span class="fortress">Mernis</span>
+                        <span class="fortress">YÖKSİS</span>
+                        <span class="fortress">LDAP/AD</span>
+                    </div>
+                </div>
+
+                <div class="kingdom-card">
+                    <h3 class="kingdom-name">💰 The Finance Guild</h3>
+                    <div class="kingdom-fortresses">
+                        <span class="fortress">Sanal POS</span>
+                        <span class="fortress">KİP</span>
+                        <span class="fortress">Kalite</span>
+                        <span class="fortress">Patent/Lisans</span>
+                        <span class="fortress">Bütçe</span>
+                    </div>
+                </div>
+
+                <div class="kingdom-card">
+                    <h3 class="kingdom-name">🏥 The Halls of Healing</h3>
+                    <div class="kingdom-fortresses">
+                        <span class="fortress">Etik Kurul</span>
+                        <span class="fortress">Klinik Araştırmalar</span>
+                        <span class="fortress">Sağlık Portal</span>
+                        <span class="fortress">Randevu</span>
+                    </div>
+                </div>
+
+                <div class="kingdom-card">
+                    <h3 class="kingdom-name">📱 The Modern Age</h3>
+                    <div class="kingdom-fortresses">
+                        <span class="fortress">İU Mobil</span>
+                        <span class="fortress">CMS</span>
+                        <span class="fortress">İU Press</span>
+                        <span class="fortress">Arşiv</span>
+                        <span class="fortress">Kütüphane</span>
+                    </div>
+                </div>
+
+                <div class="kingdom-card legendary-kingdom">
+                    <h3 class="kingdom-name">⭐ Legendary Fortresses</h3>
+                    <div class="kingdom-fortresses">
+                        <span class="fortress legendary">EBYS</span>
+                        <span class="fortress legendary">SYBS</span>
+                        <span class="fortress legendary">Protokoller</span>
+                        <span class="fortress legendary">Kurumsal Portal</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deeds of Valor (Achievements) -->
+        <section class="section" id="deeds">
+            <div class="section-header">
+                <div class="section-divider">
+                    <span class="section-ornament">🏆</span>
+                </div>
+                <h2 class="section-title">Deeds of Valor</h2>
+                <p class="section-subtitle">Honors earned through noble service</p>
+            </div>
+
+            <div class="deeds-grid">
+                <div class="deed-card">
+                    <div class="deed-icon">🏛️</div>
+                    <h3 class="deed-name">Guardian of the Citadel</h3>
+                    <p class="deed-desc">Protected 40+ realms at the University</p>
+                </div>
+                <div class="deed-card">
+                    <div class="deed-icon">⚔️</div>
+                    <h3 class="deed-name">First Blade Forged</h3>
+                    <p class="deed-desc">First code written in the year 2008</p>
+                </div>
+                <div class="deed-card">
+                    <div class="deed-icon">📚</div>
+                    <h3 class="deed-name">Keeper of Three Scrolls</h3>
+                    <p class="deed-desc">Math + CS + MSc degrees achieved</p>
+                </div>
+                <div class="deed-card">
+                    <div class="deed-icon">👑</div>
+                    <h3 class="deed-name">Crowned as Leader</h3>
+                    <p class="deed-desc">Promoted to Tech Lead of the realm</p>
+                </div>
+                <div class="deed-card">
+                    <div class="deed-icon">🚀</div>
+                    <h3 class="deed-name">Founder of Kingdoms</h3>
+                    <p class="deed-desc">Co-Founded the d-s28.com empire</p>
+                </div>
+                <div class="deed-card">
+                    <div class="deed-icon">☕</div>
+                    <h3 class="deed-name">Endless Fuel</h3>
+                    <p class="deed-desc">18,615+ cups of the sacred brew</p>
+                </div>
+                <div class="deed-card">
+                    <div class="deed-icon">🐛</div>
+                    <h3 class="deed-name">Slayer of Bugs</h3>
+                    <p class="deed-desc">∞ creatures of darkness banished</p>
+                </div>
+                <div class="deed-card">
+                    <div class="deed-icon">🌍</div>
+                    <h3 class="deed-name">Champion of the Free</h3>
+                    <p class="deed-desc">Open University project launched</p>
                 </div>
             </div>
         </section>
 
         <!-- Ancient Scrolls (Education) -->
-        <section class="section">
+        <section class="section" id="scrolls">
             <div class="section-header">
                 <div class="section-divider">
                     <span class="section-ornament">📜</span>
@@ -205,32 +392,127 @@
                 <p class="section-subtitle">Knowledge preserved from the elder days</p>
             </div>
 
-            <div class="powers-grid">
-                <div class="power-card">
-                    <div class="power-icon">🎓</div>
-                    <h3 class="power-name">The Master's Scroll</h3>
-                    <p class="power-rank">Computer Engineering</p>
-                    <p class="power-skills">Systems Architecture • The Highest Wisdom</p>
+            <div class="scrolls-grid">
+                <div class="scroll-card">
+                    <div class="scroll-seal"></div>
+                    <div class="scroll-icon">🎓</div>
+                    <h3 class="scroll-degree">The Master's Scroll</h3>
+                    <p class="scroll-field">Computer Engineering</p>
+                    <p class="scroll-institution">Istanbul University • The Great Library</p>
+                    <p class="scroll-focus">Systems Architecture • Enterprise Design</p>
                 </div>
 
-                <div class="power-card">
-                    <div class="power-icon">💻</div>
-                    <h3 class="power-name">The Scholar's Scroll</h3>
-                    <p class="power-rank">Computer Science</p>
-                    <p class="power-skills">Algorithms • Data Structures • The Core Teachings</p>
+                <div class="scroll-card">
+                    <div class="scroll-seal"></div>
+                    <div class="scroll-icon">💻</div>
+                    <h3 class="scroll-degree">The Scholar's Scroll</h3>
+                    <p class="scroll-field">Computer Science</p>
+                    <p class="scroll-institution">Sakarya University • The Northern Academy</p>
+                    <p class="scroll-focus">Algorithms • Data Structures</p>
                 </div>
 
-                <div class="power-card">
-                    <div class="power-icon">∑</div>
-                    <h3 class="power-name">The First Scroll</h3>
-                    <p class="power-rank">Mathematics</p>
-                    <p class="power-skills">Logic • Problem Solving • The Foundation</p>
+                <div class="scroll-card">
+                    <div class="scroll-seal"></div>
+                    <div class="scroll-icon">∑</div>
+                    <h3 class="scroll-degree">The First Scroll</h3>
+                    <p class="scroll-field">Mathematics</p>
+                    <p class="scroll-institution">Sakarya University • The Halls of Numbers</p>
+                    <p class="scroll-focus">Logic • Problem Solving Foundation</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
-        <section class="section">
+        <!-- Open University - The Fellowship's Mission -->
+        <section class="section featured-section" id="fellowship">
+            <div class="section-header">
+                <div class="section-divider">
+                    <span class="section-ornament">💍</span>
+                </div>
+                <h2 class="section-title">The Fellowship's Mission</h2>
+                <p class="section-subtitle">Open University - Knowledge for All Free Peoples</p>
+            </div>
+
+            <div class="fellowship-card">
+                <div class="fellowship-glow"></div>
+                <div class="fellowship-content">
+                    <div class="fellowship-badge">✦ LIFE QUEST ✦</div>
+                    <h3 class="fellowship-title">Open University</h3>
+                    <p class="fellowship-tagline">"Even the smallest person can change the course of the future"</p>
+                    <p class="fellowship-desc">
+                        Education should be free and accessible to all free peoples of Middle-earth.
+                        Building a fellowship of learners - an open-source platform to democratize knowledge and bring
+                        light to all corners of the realm.
+                    </p>
+                    <div class="fellowship-tech">
+                        <span>Next.js</span>
+                        <span>TypeScript</span>
+                        <span>PostgreSQL</span>
+                        <span>Prisma</span>
+                        <span>TailwindCSS</span>
+                        <span>Open Source</span>
+                    </div>
+                    <div class="fellowship-actions">
+                        <a href="https://github.com/dyamba/openuniversity" target="_blank" class="btn-primary">⭐ Join
+                            the Fellowship</a>
+                        <a href="https://github.com/dyamba/openuniversity" target="_blank" class="btn-secondary">Explore
+                            the Path</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Side Quests -->
+        <section class="section" id="quests">
+            <div class="section-header">
+                <div class="section-divider">
+                    <span class="section-ornament">🗡️</span>
+                </div>
+                <h2 class="section-title">Side Quests</h2>
+                <p class="section-subtitle">Adventures beyond the main journey</p>
+            </div>
+
+            <div class="quests-grid">
+                <div class="quest-card upcoming">
+                    <span class="upcoming-badge">COMING SOON</span>
+                    <div class="quest-icon">📊</div>
+                    <h3 class="quest-name">Learning Tracker</h3>
+                    <p class="quest-type">Reconnaissance Mission</p>
+                    <p class="quest-brief">Track your training progress across all realms</p>
+                </div>
+
+                <div class="quest-card upcoming">
+                    <span class="upcoming-badge">COMING SOON</span>
+                    <div class="quest-icon">📚</div>
+                    <h3 class="quest-name">Niche Academy</h3>
+                    <p class="quest-type">Training Grounds</p>
+                    <p class="quest-brief">Specialized training for niche crafts</p>
+                </div>
+
+                <div class="quest-card">
+                    <div class="quest-icon">🛍️</div>
+                    <h3 class="quest-name">SkillShop</h3>
+                    <p class="quest-type">Trading Post</p>
+                    <p class="quest-brief">Marketplace for digital crafts</p>
+                </div>
+
+                <div class="quest-card">
+                    <div class="quest-icon">🎤</div>
+                    <h3 class="quest-name">PitchPerfect</h3>
+                    <p class="quest-type">Bardic Training</p>
+                    <p class="quest-brief">Master the art of presentation</p>
+                </div>
+
+                <div class="quest-card">
+                    <div class="quest-icon">📱</div>
+                    <h3 class="quest-name">iOS Playground</h3>
+                    <p class="quest-type">Alchemist's Lab</p>
+                    <p class="quest-brief">Swift experiments and arcane protocols</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact - Send a Raven -->
+        <section class="section" id="contact">
             <div class="section-header">
                 <div class="section-divider">
                     <span class="section-ornament">🕊️</span>
@@ -240,21 +522,25 @@
             </div>
 
             <div class="contact-scroll">
-                <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 2rem;">
-                    "Even the smallest person can change the course of the future... or fix a critical bug."
-                </p>
+                <div class="parchment">
+                    <p class="parchment-text">
+                        "I am a servant of the Secret Fire, wielder of the Flame of Anor...
+                        and also pretty good at debugging JavaScript."
+                    </p>
+                    <p class="parchment-author">— Gandalf, probably</p>
+                </div>
 
                 <div class="contact-links">
                     <a href="mailto:contact@unsalaslan.me" class="contact-link">
-                        <span>📧</span>
+                        <span class="link-icon">📧</span>
                         <span>contact@unsalaslan.me</span>
                     </a>
                     <a href="https://github.com/dyamba" target="_blank" class="contact-link">
-                        <span>🐙</span>
+                        <span class="link-icon">🐙</span>
                         <span>github.com/dyamba</span>
                     </a>
                     <a href="https://linkedin.com/in/unsalaslan" target="_blank" class="contact-link">
-                        <span>💼</span>
+                        <span class="link-icon">💼</span>
                         <span>linkedin.com/in/unsalaslan</span>
                     </a>
                 </div>
@@ -281,6 +567,22 @@
         setTimeout(() => {
             document.getElementById('loading-screen').classList.add('hidden');
         }, 2000);
+
+        // Animate bars on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fills = entry.target.querySelectorAll('.stat-fill, .power-fill, .progress-bar');
+                    fills.forEach(fill => {
+                        fill.style.width = fill.getAttribute('data-width') || fill.style.width;
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
     </script>
 </body>
 

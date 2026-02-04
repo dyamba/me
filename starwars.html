@@ -57,76 +57,94 @@
                     </div>
                 </div>
 
-                <div style="display: flex; justify-content: space-around; margin-top: 2rem; color: var(--sw-gold);">
-                    <div style="text-align: center;">
-                        <div style="font-size: 2rem; font-family: var(--font-display);">40+</div>
-                        <div style="font-size: 0.7rem; color: var(--sw-gray);">SYSTEMS CONQUERED</div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">SYSTEMS CONQUERED</div>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 2rem; font-family: var(--font-display);">17</div>
-                        <div style="font-size: 0.7rem; color: var(--sw-gray);">YEARS IN SERVICE</div>
+                    <div class="stat-item">
+                        <div class="stat-number">17</div>
+                        <div class="stat-label">YEARS IN SERVICE</div>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 2rem; font-family: var(--font-display);">3</div>
-                        <div style="font-size: 0.7rem; color: var(--sw-gray);">HOLOCRONS MASTERED</div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">HOLOCRONS MASTERED</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Mission Log -->
-        <section class="section">
+        <!-- Mission Log (Quest Log) -->
+        <section class="section" id="missions">
             <div class="section-header">
                 <span class="section-label">// JEDI COUNCIL RECORDS</span>
                 <h2 class="section-title">MISSION LOG</h2>
             </div>
 
             <div class="mission-log">
-                <div class="mission-card">
-                    <span class="mission-type">◆ ACTIVE MISSION</span>
-                    <h3 class="mission-title">Lead the Jedi Council of Engineering</h3>
-                    <p class="mission-location">Istanbul University • Coruscant Sector</p>
-                    <p style="color: var(--sw-gray); margin-top: 0.5rem; font-size: 0.9rem;">
-                        Commanding 40+ star systems (enterprise applications). Training young Padawans in the ways of
-                        clean code.
-                    </p>
-                </div>
-
-                <div class="mission-card">
-                    <span class="mission-type">◆ LEGENDARY VENTURE</span>
+                <div class="mission-card legendary">
+                    <span class="mission-type">◆ LEGENDARY VENTURE • 2024 - Present</span>
                     <h3 class="mission-title">Build the Commerce Empire</h3>
                     <p class="mission-location"><a href="https://www.d-s28.com" target="_blank"
-                            style="color: var(--sw-gold);">d-s28.com</a> • Outer Rim</p>
-                    <p style="color: var(--sw-gray); margin-top: 0.5rem; font-size: 0.9rem;">
-                        CTO & Co-Founder. Building the future of galactic commerce.
-                    </p>
+                            class="sw-link">d-s28.com</a> • Outer Rim Territories</p>
+                    <p class="mission-desc">CTO & Co-Founder. Building the future of galactic commerce as the technical
+                        architect of a new trade federation.</p>
+                    <div class="mission-tags">
+                        <span class="tag">E-Commerce</span>
+                        <span class="tag">Architecture</span>
+                        <span class="tag">Leadership</span>
+                    </div>
+                    <div class="mission-progress">
+                        <div class="progress-bar" style="width: 30%"></div>
+                        <span class="progress-text">30% Complete</span>
+                    </div>
+                </div>
+
+                <div class="mission-card active">
+                    <span class="mission-type">◆ ACTIVE MISSION • 2020 - Present</span>
+                    <h3 class="mission-title">Lead the Jedi Council of Engineering</h3>
+                    <p class="mission-location">Istanbul University • Coruscant Sector</p>
+                    <p class="mission-desc">Commanding 40+ star systems (enterprise applications). Training young
+                        Padawans in the ways of the Force (clean code). Defending the galaxy from bugs and technical
+                        debt.</p>
+                    <div class="mission-tags">
+                        <span class="tag">Tech Lead</span>
+                        <span class="tag">40+ Systems</span>
+                        <span class="tag">Architecture</span>
+                    </div>
                 </div>
 
                 <div class="mission-card">
-                    <span class="mission-type">◆ COMPLETED CAMPAIGN</span>
-                    <h3 class="mission-title">Assemble the Rebel Alliance</h3>
-                    <p class="mission-location">Development Teams • 2015 - 2020</p>
-                    <p style="color: var(--sw-gray); margin-top: 0.5rem; font-size: 0.9rem;">
-                        Led cross-functional squadrons. Established best practices. Built continuous improvement
-                        culture.
-                    </p>
+                    <span class="mission-type">◆ COMPLETED CAMPAIGN • 2015 - 2020</span>
+                    <h3 class="mission-title">Command the Clone Army</h3>
+                    <p class="mission-location">Development Squadrons • Mid Rim</p>
+                    <p class="mission-desc">Led cross-functional strike teams through dangerous missions. Established
+                        the Jedi Code of best practices. Built the foundations of the Galactic Development Order.</p>
+                    <div class="mission-tags">
+                        <span class="tag">Team Lead</span>
+                        <span class="tag">Agile</span>
+                        <span class="tag">Mentoring</span>
+                    </div>
                 </div>
 
                 <div class="mission-card">
-                    <span class="mission-type">◆ ORIGIN STORY</span>
-                    <h3 class="mission-title">The Padawan Years</h3>
-                    <p class="mission-location">Enko Teknik • Sakarya System • 2008</p>
-                    <p style="color: var(--sw-gray); margin-top: 0.5rem; font-size: 0.9rem;">
-                        First steps into a larger world. Discovered the Force of programming.
-                    </p>
+                    <span class="mission-type">◆ ORIGIN STORY • 2008</span>
+                    <h3 class="mission-title">The Padawan Awakens</h3>
+                    <p class="mission-location">Enko Teknik • Sakarya System</p>
+                    <p class="mission-desc">First contact with the Force of programming. Discovered my midi-chlorian
+                        count was off the charts. Began training in the ancient arts of software development.</p>
+                    <div class="mission-tags">
+                        <span class="tag">First Code</span>
+                        <span class="tag">Origin</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Force Powers -->
-        <section class="section">
+        <!-- Force Powers (Skills) -->
+        <section class="section" id="powers">
             <div class="section-header">
-                <span class="section-label">// FORCE ABILITIES</span>
+                <span class="section-label">// FORCE ABILITIES DATABASE</span>
                 <h2 class="section-title">POWERS MASTERED</h2>
             </div>
 
@@ -134,113 +152,385 @@
                 <div class="power-card">
                     <div class="power-icon">⚡</div>
                     <h3 class="power-name">FORCE FRONTEND</h3>
-                    <p class="power-level">MASTER LEVEL</p>
-                    <p style="color: var(--sw-gray); font-size: 0.8rem;">React • TypeScript • Vue.js • Angular</p>
+                    <p class="power-level">GRAND MASTER</p>
+                    <div class="power-bar">
+                        <div class="power-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>React</span><span>TypeScript</span><span>Vue.js</span><span>Angular</span><span>Next.js</span><span>HTML/CSS</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">🔮</div>
                     <h3 class="power-name">FORCE BACKEND</h3>
-                    <p class="power-level">MASTER LEVEL</p>
-                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Node.js • .NET • Java • Python</p>
+                    <p class="power-level">GRAND MASTER</p>
+                    <div class="power-bar">
+                        <div class="power-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>Node.js</span><span>.NET Core</span><span>Java</span><span>Python</span><span>REST
+                            APIs</span><span>GraphQL</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">📱</div>
                     <h3 class="power-name">FORCE MOBILE</h3>
-                    <p class="power-level">KNIGHT LEVEL</p>
-                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Swift • iOS • React Native • Flutter</p>
+                    <p class="power-level">JEDI KNIGHT</p>
+                    <div class="power-bar">
+                        <div class="power-fill green" style="width: 80%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>Swift</span><span>iOS</span><span>React
+                            Native</span><span>Flutter</span><span>Kotlin</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">☁️</div>
                     <h3 class="power-name">FORCE CLOUD</h3>
-                    <p class="power-level">MASTER LEVEL</p>
-                    <p style="color: var(--sw-gray); font-size: 0.8rem;">AWS • Azure • Docker • Kubernetes</p>
+                    <p class="power-level">GRAND MASTER</p>
+                    <div class="power-bar">
+                        <div class="power-fill" style="width: 90%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>AWS</span><span>Azure</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>Terraform</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">🗄️</div>
                     <h3 class="power-name">FORCE DATA</h3>
-                    <p class="power-level">MASTER LEVEL</p>
-                    <p style="color: var(--sw-gray); font-size: 0.8rem;">PostgreSQL • MongoDB • Redis • SQL Server</p>
+                    <p class="power-level">GRAND MASTER</p>
+                    <div class="power-bar">
+                        <div class="power-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>SQL
+                            Server</span><span>Oracle</span><span>Elasticsearch</span>
+                    </div>
                 </div>
 
                 <div class="power-card">
                     <div class="power-icon">👑</div>
                     <h3 class="power-name">FORCE LEADERSHIP</h3>
-                    <p class="power-level">GRAND MASTER</p>
-                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Team Management • Agile • Mentoring</p>
+                    <p class="power-level">JEDI COUNCIL</p>
+                    <div class="power-bar">
+                        <div class="power-fill red" style="width: 100%"></div>
+                    </div>
+                    <div class="power-skills">
+                        <span>Tech
+                            Lead</span><span>Agile/Scrum</span><span>Mentoring</span><span>Architecture</span><span>Strategy</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Holocron Training -->
-        <section class="section">
+        <!-- Star Systems (40+ İÜ Projects) -->
+        <section class="section" id="systems">
             <div class="section-header">
-                <span class="section-label">// JEDI ARCHIVES</span>
+                <span class="section-label">// GALACTIC MAP OF CONQUERED SYSTEMS</span>
+                <h2 class="section-title">STAR SYSTEMS DEFENDED</h2>
+                <p class="section-subtitle">40+ Systems Under Protection of the Jedi Order</p>
+            </div>
+
+            <div class="systems-grid">
+                <div class="system-sector">
+                    <h3 class="sector-name">🎓 ACADEMIC SECTOR</h3>
+                    <div class="sector-systems">
+                        <span class="system">OBS V2</span>
+                        <span class="system">AKSİS</span>
+                        <span class="system">Başvuru Sistemi</span>
+                        <span class="system">PBYS</span>
+                        <span class="system">Yabancı Öğrenci</span>
+                        <span class="system">Online Sınav</span>
+                        <span class="system">Üniversite Tanıtım</span>
+                    </div>
+                </div>
+
+                <div class="system-sector">
+                    <h3 class="sector-name">👥 PERSONNEL DOMAIN</h3>
+                    <div class="sector-systems">
+                        <span class="system">Personel Portal</span>
+                        <span class="system">IDM</span>
+                        <span class="system">PDKS</span>
+                        <span class="system">BAP</span>
+                        <span class="system">Puantaj</span>
+                        <span class="system">İzin Takip</span>
+                    </div>
+                </div>
+
+                <div class="system-sector">
+                    <h3 class="sector-name">🔐 SECURITY FORTRESS</h3>
+                    <div class="sector-systems">
+                        <span class="system legendary">SSO-İU GİRİŞ</span>
+                        <span class="system">E-Devlet Entegrasyon</span>
+                        <span class="system">Mernis</span>
+                        <span class="system">YÖKSİS</span>
+                        <span class="system">LDAP/AD</span>
+                    </div>
+                </div>
+
+                <div class="system-sector">
+                    <h3 class="sector-name">💰 FINANCE GUILD</h3>
+                    <div class="sector-systems">
+                        <span class="system">Sanal POS</span>
+                        <span class="system">KİP</span>
+                        <span class="system">Kalite</span>
+                        <span class="system">Patent/Lisans</span>
+                        <span class="system">Bütçe</span>
+                    </div>
+                </div>
+
+                <div class="system-sector">
+                    <h3 class="sector-name">🏥 MEDICAL WING</h3>
+                    <div class="sector-systems">
+                        <span class="system">Etik Kurul</span>
+                        <span class="system">Klinik Araştırmalar</span>
+                        <span class="system">Sağlık Portal</span>
+                        <span class="system">Randevu</span>
+                    </div>
+                </div>
+
+                <div class="system-sector">
+                    <h3 class="sector-name">📱 MODERN ERA</h3>
+                    <div class="sector-systems">
+                        <span class="system">İU Mobil</span>
+                        <span class="system">CMS</span>
+                        <span class="system">İU Press</span>
+                        <span class="system">Arşiv</span>
+                        <span class="system">Kütüphane</span>
+                    </div>
+                </div>
+
+                <div class="system-sector legendary-sector">
+                    <h3 class="sector-name">⭐ LEGENDARY SYSTEMS</h3>
+                    <div class="sector-systems">
+                        <span class="system legendary">EBYS</span>
+                        <span class="system legendary">SYBS</span>
+                        <span class="system legendary">Protokoller</span>
+                        <span class="system legendary">Kurumsal Portal</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements (Medals of Honor) -->
+        <section class="section" id="medals">
+            <div class="section-header">
+                <span class="section-label">// MEDALS OF THE REPUBLIC</span>
+                <h2 class="section-title">HONORS ACHIEVED</h2>
+            </div>
+
+            <div class="medals-grid">
+                <div class="medal-card">
+                    <div class="medal-icon">🏛️</div>
+                    <h3 class="medal-name">Guardian of Coruscant</h3>
+                    <p class="medal-desc">Protected 40+ star systems at the University</p>
+                </div>
+                <div class="medal-card">
+                    <div class="medal-icon">⚔️</div>
+                    <h3 class="medal-name">First Lightsaber</h3>
+                    <p class="medal-desc">First code written in 2008</p>
+                </div>
+                <div class="medal-card">
+                    <div class="medal-icon">📚</div>
+                    <h3 class="medal-name">Triple Holocron</h3>
+                    <p class="medal-desc">Math + CS + MSc degrees achieved</p>
+                </div>
+                <div class="medal-card">
+                    <div class="medal-icon">👑</div>
+                    <h3 class="medal-name">Jedi Council Seat</h3>
+                    <p class="medal-desc">Promoted to Tech Lead</p>
+                </div>
+                <div class="medal-card">
+                    <div class="medal-icon">🚀</div>
+                    <h3 class="medal-name">Trade Federation</h3>
+                    <p class="medal-desc">Co-Founded d-s28.com</p>
+                </div>
+                <div class="medal-card">
+                    <div class="medal-icon">☕</div>
+                    <h3 class="medal-name">Infinite Fuel</h3>
+                    <p class="medal-desc">18,615+ cups of coffee</p>
+                </div>
+                <div class="medal-card">
+                    <div class="medal-icon">🐛</div>
+                    <h3 class="medal-name">Bug Hunter</h3>
+                    <p class="medal-desc">∞ bugs eliminated</p>
+                </div>
+                <div class="medal-card">
+                    <div class="medal-icon">🌍</div>
+                    <h3 class="medal-name">Open Source</h3>
+                    <p class="medal-desc">Open University project launched</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Holocron Training (Education) -->
+        <section class="section" id="holocrons">
+            <div class="section-header">
+                <span class="section-label">// JEDI TEMPLE ARCHIVES</span>
                 <h2 class="section-title">HOLOCRON TRAINING</h2>
             </div>
 
-            <div class="powers-grid">
-                <div class="power-card">
-                    <div class="power-icon">🎓</div>
-                    <h3 class="power-name">MASTER'S HOLOCRON</h3>
-                    <p class="power-level">Computer Engineering</p>
-                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Systems and Software Architecture</p>
+            <div class="holocrons-grid">
+                <div class="holocron-card">
+                    <div class="holocron-glow"></div>
+                    <div class="holocron-icon">🎓</div>
+                    <h3 class="holocron-degree">Master's Holocron</h3>
+                    <p class="holocron-field">Computer Engineering</p>
+                    <p class="holocron-institution">Istanbul University • Jedi Temple</p>
+                    <p class="holocron-focus">Systems Architecture • Enterprise Design</p>
                 </div>
 
-                <div class="power-card">
-                    <div class="power-icon">💻</div>
-                    <h3 class="power-name">KNIGHT'S HOLOCRON</h3>
-                    <p class="power-level">Computer Science</p>
-                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Algorithms & Data Structures</p>
+                <div class="holocron-card">
+                    <div class="holocron-glow"></div>
+                    <div class="holocron-icon">💻</div>
+                    <h3 class="holocron-degree">Knight's Holocron</h3>
+                    <p class="holocron-field">Computer Science</p>
+                    <p class="holocron-institution">Sakarya University • Training Academy</p>
+                    <p class="holocron-focus">Algorithms • Data Structures</p>
                 </div>
 
-                <div class="power-card">
-                    <div class="power-icon">∑</div>
-                    <h3 class="power-name">PADAWAN HOLOCRON</h3>
-                    <p class="power-level">Mathematics</p>
-                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Logic & Problem Solving</p>
+                <div class="holocron-card">
+                    <div class="holocron-glow"></div>
+                    <div class="holocron-icon">∑</div>
+                    <h3 class="holocron-degree">Padawan Holocron</h3>
+                    <p class="holocron-field">Mathematics</p>
+                    <p class="holocron-institution">Sakarya University • Youngling Academy</p>
+                    <p class="holocron-focus">Logic • Problem Solving Foundation</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
-        <section class="section">
+        <!-- Open University - Rebel Alliance Project -->
+        <section class="section featured-section" id="rebellion">
+            <div class="section-header">
+                <span class="section-label">// REBEL ALLIANCE PROJECT</span>
+                <h2 class="section-title">JOIN THE REBELLION</h2>
+                <p class="section-subtitle">Open University - Knowledge Should Be Free</p>
+            </div>
+
+            <div class="rebellion-card">
+                <div class="rebellion-glow"></div>
+                <div class="rebellion-content">
+                    <div class="rebellion-badge">⭐ LIFE MISSION</div>
+                    <h3 class="rebellion-title">Open University</h3>
+                    <p class="rebellion-tagline">"The Force belongs to everyone"</p>
+                    <p class="rebellion-desc">
+                        Education should be free and accessible to everyone, like the Force itself.
+                        Building the Rebel Alliance of education - an open-source platform to democratize knowledge
+                        across the galaxy.
+                    </p>
+                    <div class="rebellion-tech">
+                        <span>Next.js</span>
+                        <span>TypeScript</span>
+                        <span>PostgreSQL</span>
+                        <span>Prisma</span>
+                        <span>TailwindCSS</span>
+                        <span>Open Source</span>
+                    </div>
+                    <div class="rebellion-actions">
+                        <a href="https://github.com/dyamba/openuniversity" target="_blank" class="btn-primary">⭐ Join
+                            the Rebellion</a>
+                        <a href="https://github.com/dyamba/openuniversity" target="_blank" class="btn-secondary">Explore
+                            Base</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Side Missions (GitHub Projects) -->
+        <section class="section" id="side-missions">
+            <div class="section-header">
+                <span class="section-label">// COVERT OPERATIONS</span>
+                <h2 class="section-title">SIDE MISSIONS</h2>
+            </div>
+
+            <div class="side-missions-grid">
+                <div class="side-mission upcoming">
+                    <span class="upcoming-badge">COMING SOON</span>
+                    <div class="mission-icon">📊</div>
+                    <h3 class="mission-name">Learning Tracker</h3>
+                    <p class="mission-type">Reconnaissance System</p>
+                    <p class="mission-brief">Track your training progress across the galaxy</p>
+                </div>
+
+                <div class="side-mission upcoming">
+                    <span class="upcoming-badge">COMING SOON</span>
+                    <div class="mission-icon">📚</div>
+                    <h3 class="mission-name">Niche Academy</h3>
+                    <p class="mission-type">Training Facility</p>
+                    <p class="mission-brief">Specialized Jedi training for niche skills</p>
+                </div>
+
+                <div class="side-mission">
+                    <div class="mission-icon">🛍️</div>
+                    <h3 class="mission-name">SkillShop</h3>
+                    <p class="mission-type">Trade Station</p>
+                    <p class="mission-brief">Marketplace for digital goods</p>
+                </div>
+
+                <div class="side-mission">
+                    <div class="mission-icon">🎤</div>
+                    <h3 class="mission-name">PitchPerfect</h3>
+                    <p class="mission-type">Communication Array</p>
+                    <p class="mission-brief">Presentation training platform</p>
+                </div>
+
+                <div class="side-mission">
+                    <div class="mission-icon">📱</div>
+                    <h3 class="mission-name">iOS Playground</h3>
+                    <p class="mission-type">R&D Lab</p>
+                    <p class="mission-brief">Swift experiments and protocols</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact - Holocommunicator -->
+        <section class="section" id="contact">
             <div class="section-header">
                 <span class="section-label">// HOLOCOMMUNICATOR</span>
                 <h2 class="section-title">ESTABLISH CONTACT</h2>
             </div>
 
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="color: var(--sw-gold); font-style: italic; font-size: 1.2rem; margin-bottom: 2rem;">
-                    "Do. Or do not. There is no try."
-                </p>
-                <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <a href="mailto:contact@unsalaslan.me" class="power-card" style="text-decoration: none;">
-                        <span style="font-size: 1.5rem;">📧</span>
-                        <span style="color: var(--sw-gold);">contact@unsalaslan.me</span>
-                    </a>
-                    <a href="https://github.com/dyamba" target="_blank" class="power-card"
-                        style="text-decoration: none;">
-                        <span style="font-size: 1.5rem;">🐙</span>
-                        <span style="color: var(--sw-gold);">github.com/dyamba</span>
-                    </a>
-                    <a href="https://linkedin.com/in/unsalaslan" target="_blank" class="power-card"
-                        style="text-decoration: none;">
-                        <span style="font-size: 1.5rem;">💼</span>
-                        <span style="color: var(--sw-gold);">linkedin.com/in/unsalaslan</span>
-                    </a>
+            <div class="contact-terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-title">holocomm://jedi-council</span>
                 </div>
+                <div class="terminal-body">
+                    <p>> Initiating secure channel...</p>
+                    <p>> Jedi Master Ünsal Aslan online</p>
+                    <p>> "Do. Or do not. There is no try."</p>
+                    <p>> Ready to receive transmission_</p>
+                </div>
+            </div>
+
+            <div class="contact-links">
+                <a href="mailto:contact@unsalaslan.me" class="contact-link">
+                    <span class="link-icon">📧</span>
+                    <span>contact@unsalaslan.me</span>
+                </a>
+                <a href="https://github.com/dyamba" target="_blank" class="contact-link">
+                    <span class="link-icon">🐙</span>
+                    <span>github.com/dyamba</span>
+                </a>
+                <a href="https://linkedin.com/in/unsalaslan" target="_blank" class="contact-link">
+                    <span class="link-icon">💼</span>
+                    <span>linkedin.com/in/unsalaslan</span>
+                </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p class="footer-quote">"May the Code be with you."</p>
-        <p>Built by Jedi Master Ünsal Aslan • A long time ago in a galaxy far, far away...</p>
+        <p class="footer-quote">"May the Code be with you, always."</p>
+        <p class="footer-text">Forged by Jedi Master Ünsal Aslan • A long time ago in a galaxy far, far away...</p>
     </footer>
 
     <!-- Theme Navigation -->
@@ -255,6 +545,19 @@
         setTimeout(() => {
             document.getElementById('loading-screen').classList.add('hidden');
         }, 2000);
+
+        // Animate bars on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.width = entry.target.getAttribute('data-width') || entry.target.style.width;
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.power-fill, .progress-bar').forEach(bar => {
+            observer.observe(bar);
+        });
     </script>
 </body>
 

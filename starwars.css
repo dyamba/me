@@ -1,5 +1,6 @@
 /* ===================================
    Star Wars Theme - unsalaslan.me
+   Full Edition
    =================================== */
 
 :root {
@@ -12,6 +13,7 @@
     --sw-green: #00ff00;
     --sw-gray: #8b8b8b;
     --sw-light: #e0e0e0;
+    --sw-purple: #a855f7;
 
     /* Semantic Colors */
     --bg-primary: var(--sw-black);
@@ -30,6 +32,9 @@
 
     --font-main: 'JetBrains Mono', monospace;
     --font-display: 'Orbitron', sans-serif;
+
+    --transition-fast: all 0.2s ease;
+    --transition-normal: all 0.3s ease;
 }
 
 * {
@@ -59,7 +64,9 @@ body {
         radial-gradient(1px 1px at 90px 40px, white, transparent),
         radial-gradient(2px 2px at 160px 120px, rgba(255, 255, 255, 0.9), transparent),
         radial-gradient(1px 1px at 230px 80px, white, transparent),
-        radial-gradient(2px 2px at 300px 150px, rgba(255, 255, 255, 0.7), transparent);
+        radial-gradient(2px 2px at 300px 150px, rgba(255, 255, 255, 0.7), transparent),
+        radial-gradient(1px 1px at 50px 150px, white, transparent),
+        radial-gradient(1px 1px at 180px 50px, rgba(255, 255, 255, 0.6), transparent);
     background-repeat: repeat;
     background-size: 350px 200px;
     z-index: -1;
@@ -78,7 +85,7 @@ body {
     }
 }
 
-/* Loading Screen - Hyperspace */
+/* Loading Screen */
 .loading-screen {
     position: fixed;
     top: 0;
@@ -96,10 +103,6 @@ body {
 .loading-screen.hidden {
     opacity: 0;
     visibility: hidden;
-}
-
-.loading-content {
-    text-align: center;
 }
 
 .loading-title {
@@ -134,45 +137,22 @@ body {
     }
 }
 
-/* Crawl Text Intro */
+/* Hero - Jedi Card */
 .crawl-container {
-    perspective: 400px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    padding: 2rem;
 }
 
-.crawl-text {
-    font-family: var(--font-display);
-    color: var(--sw-gold);
-    text-align: center;
-    transform: rotateX(25deg);
-    animation: crawl 2s ease-out forwards;
-}
-
-@keyframes crawl {
-    from {
-        transform: rotateX(25deg) translateY(100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: rotateX(25deg) translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Character Card - Jedi Profile */
 .jedi-card {
     background: var(--bg-card);
     border: 2px solid var(--sw-gold);
-    border-radius: 0;
-    clip-path: polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px));
-    padding: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
+    clip-path: polygon(0 15px, 15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px));
+    padding: 3rem;
+    max-width: 700px;
+    width: 100%;
     position: relative;
 }
 
@@ -185,6 +165,7 @@ body {
     bottom: 0;
     background: linear-gradient(135deg, transparent 40%, var(--accent-glow) 50%, transparent 60%);
     animation: hologram 3s ease-in-out infinite;
+    pointer-events: none;
 }
 
 @keyframes hologram {
@@ -205,18 +186,18 @@ body {
     color: var(--sw-gold);
     text-align: center;
     margin-bottom: 0.5rem;
-    text-shadow: 0 0 20px var(--accent-glow);
+    text-shadow: 0 0 30px var(--accent-glow);
 }
 
 .jedi-rank {
     text-align: center;
     color: var(--sw-blue);
-    font-size: 1rem;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
 }
 
-/* Lightsaber Stats */
+/* Saber Stats */
 .saber-stats {
     display: flex;
     flex-direction: column;
@@ -231,9 +212,10 @@ body {
 }
 
 .saber-label {
-    width: 100px;
-    font-size: 0.8rem;
+    width: 120px;
+    font-size: 0.75rem;
     color: var(--text-secondary);
+    letter-spacing: 1px;
 }
 
 .saber-track {
@@ -248,8 +230,6 @@ body {
     height: 100%;
     background: linear-gradient(90deg, var(--saber-jedi), white);
     box-shadow: 0 0 20px var(--saber-jedi), 0 0 40px var(--saber-jedi);
-    width: 0%;
-    transition: width 1s ease-out;
 }
 
 .saber-fill.green {
@@ -260,6 +240,31 @@ body {
 .saber-fill.red {
     background: linear-gradient(90deg, var(--saber-sith), white);
     box-shadow: 0 0 20px var(--saber-sith), 0 0 40px var(--saber-sith);
+}
+
+/* Stats Row */
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--sw-gold);
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
 }
 
 /* Section Styling */
@@ -275,7 +280,7 @@ body {
 }
 
 .section-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--sw-blue);
     letter-spacing: 3px;
     display: block;
@@ -290,18 +295,39 @@ body {
     letter-spacing: 5px;
 }
 
-/* Mission Log - Timeline */
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Mission Log */
 .mission-log {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .mission-card {
     background: var(--bg-card);
-    border-left: 3px solid var(--sw-gold);
-    padding: 1.5rem;
+    border-left: 3px solid var(--sw-blue);
+    padding: 1.5rem 2rem;
     margin-bottom: 1.5rem;
     position: relative;
+    transition: var(--transition-normal);
+}
+
+.mission-card:hover {
+    transform: translateX(5px);
+    border-left-color: var(--sw-gold);
+}
+
+.mission-card.legendary {
+    border-left-color: var(--sw-gold);
+    background: linear-gradient(135deg, var(--bg-card), rgba(255, 232, 31, 0.05));
+}
+
+.mission-card.active {
+    border-left-color: var(--sw-green);
 }
 
 .mission-card::before {
@@ -309,8 +335,16 @@ body {
     position: absolute;
     left: -10px;
     top: 1.5rem;
+    color: inherit;
+    font-size: 0.8rem;
+}
+
+.mission-card.legendary::before {
     color: var(--sw-gold);
-    font-size: 1rem;
+}
+
+.mission-card.active::before {
+    color: var(--sw-green);
 }
 
 .mission-type {
@@ -324,27 +358,80 @@ body {
     font-family: var(--font-display);
     font-size: 1.25rem;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .mission-location {
-    color: var(--sw-gold);
     font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
 }
 
-/* Force Powers Grid */
+.sw-link {
+    color: var(--sw-gold);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.sw-link:hover {
+    text-decoration: underline;
+}
+
+.mission-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.mission-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: rgba(79, 195, 247, 0.1);
+    border: 1px solid var(--sw-blue);
+    color: var(--sw-blue);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.mission-progress {
+    background: rgba(255, 255, 255, 0.1);
+    height: 6px;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--sw-gold), var(--sw-blue));
+}
+
+.progress-text {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 0.7rem;
+    color: var(--sw-gold);
+}
+
+/* Powers Grid */
 .powers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
 }
 
 .power-card {
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
-    padding: 1.5rem;
+    padding: 2rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: var(--transition-normal);
 }
 
 .power-card:hover {
@@ -360,33 +447,486 @@ body {
 
 .power-name {
     font-family: var(--font-display);
-    font-size: 1.1rem;
+    font-size: 1rem;
+    color: var(--sw-gold);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.power-level {
+    font-size: 0.7rem;
+    color: var(--sw-blue);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.power-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+
+.power-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--sw-blue), white);
+    box-shadow: 0 0 10px var(--sw-blue);
+}
+
+.power-fill.green {
+    background: linear-gradient(90deg, var(--sw-green), white);
+    box-shadow: 0 0 10px var(--sw-green);
+}
+
+.power-fill.red {
+    background: linear-gradient(90deg, var(--sw-red), white);
+    box-shadow: 0 0 10px var(--sw-red);
+}
+
+.power-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.power-skills span {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+/* Systems Grid (40+ Projects) */
+.systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.system-sector {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 1.5rem;
+    transition: var(--transition-normal);
+}
+
+.system-sector:hover {
+    border-color: var(--sw-blue);
+}
+
+.system-sector.legendary-sector {
+    border-color: var(--sw-gold);
+    background: linear-gradient(135deg, var(--bg-card), rgba(255, 232, 31, 0.05));
+}
+
+.sector-name {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--sw-blue);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.legendary-sector .sector-name {
+    color: var(--sw-gold);
+}
+
+.sector-systems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.system {
+    background: rgba(79, 195, 247, 0.1);
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    color: var(--text-secondary);
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    transition: var(--transition-fast);
+}
+
+.system:hover {
+    border-color: var(--sw-blue);
+    color: var(--sw-blue);
+}
+
+.system.legendary {
+    background: rgba(255, 232, 31, 0.1);
+    border-color: var(--sw-gold);
+    color: var(--sw-gold);
+}
+
+/* Medals Grid */
+.medals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.medal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition-normal);
+}
+
+.medal-card:hover {
+    border-color: var(--sw-gold);
+    transform: translateY(-3px);
+}
+
+.medal-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.medal-name {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--sw-gold);
+    margin-bottom: 0.25rem;
+}
+
+.medal-desc {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Holocrons */
+.holocrons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.holocron-card {
+    background: var(--bg-card);
+    border: 1px solid var(--sw-blue);
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.holocron-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(79, 195, 247, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.holocron-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.holocron-degree {
+    font-family: var(--font-display);
+    font-size: 1rem;
     color: var(--sw-gold);
     margin-bottom: 0.5rem;
 }
 
-.power-level {
+.holocron-field {
+    color: var(--sw-blue);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.holocron-institution {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.holocron-focus {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+/* Featured Section - Rebellion */
+.featured-section {
+    background: linear-gradient(180deg, var(--bg-primary), rgba(79, 195, 247, 0.03));
+}
+
+.rebellion-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    border: 2px solid var(--sw-gold);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.rebellion-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 232, 31, 0.05) 0%, transparent 50%);
+    animation: rotate 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rebellion-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.rebellion-badge {
+    display: inline-block;
+    background: var(--sw-gold);
+    color: var(--bg-primary);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.rebellion-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.rebellion-tagline {
+    font-style: italic;
+    color: var(--sw-gold);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.rebellion-desc {
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.rebellion-tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.rebellion-tech span {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.rebellion-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: var(--sw-gold);
+    color: var(--bg-primary);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-normal);
+}
+
+.btn-primary:hover {
+    background: var(--text-primary);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--sw-gold);
+    border: 2px solid var(--sw-gold);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-normal);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 232, 31, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Side Missions */
+.side-missions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.side-mission {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.side-mission:hover {
+    border-color: var(--sw-blue);
+    transform: translateY(-5px);
+}
+
+.side-mission.upcoming {
+    border-style: dashed;
+    border-color: var(--sw-purple);
+}
+
+.upcoming-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--sw-purple);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+}
+
+.mission-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.mission-name {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.mission-type {
+    font-size: 0.7rem;
+    color: var(--sw-blue);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.mission-brief {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Contact */
+.contact-terminal {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--sw-blue);
+    font-family: var(--font-main);
+}
+
+.terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(79, 195, 247, 0.1);
+    border-bottom: 1px solid var(--sw-blue);
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--sw-blue);
+}
+
+.terminal-title {
     font-size: 0.75rem;
     color: var(--sw-blue);
-    margin-bottom: 1rem;
+    margin-left: auto;
+}
+
+.terminal-body {
+    padding: 1rem;
+}
+
+.terminal-body p {
+    font-size: 0.85rem;
+    color: var(--sw-green);
+    margin-bottom: 0.5rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.contact-link:hover {
+    border-color: var(--sw-gold);
+    color: var(--sw-gold);
+}
+
+.link-icon {
+    font-size: 1.5rem;
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
     border-top: 1px solid var(--border-subtle);
+}
+
+.footer-quote {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--sw-gold);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-text {
     color: var(--text-secondary);
     font-size: 0.8rem;
 }
 
-.footer-quote {
-    font-style: italic;
-    color: var(--sw-gold);
-    margin-bottom: 0.5rem;
-}
-
-/* Theme Switcher */
+/* Theme Navigation */
 .theme-nav {
     position: fixed;
     bottom: 20px;
@@ -403,21 +943,25 @@ body {
     color: var(--text-primary);
     text-decoration: none;
     font-size: 0.75rem;
-    transition: all 0.3s ease;
+    transition: var(--transition-fast);
 }
 
 .theme-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
+    border-color: var(--sw-gold);
+    color: var(--sw-gold);
 }
 
 .theme-btn.active {
-    background: var(--accent);
+    background: var(--sw-gold);
     color: var(--bg-primary);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    .jedi-card {
+        padding: 2rem;
+    }
+
     .jedi-title {
         font-size: 1.75rem;
     }
@@ -425,6 +969,30 @@ body {
     .section-title {
         font-size: 1.75rem;
         letter-spacing: 2px;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .powers-grid,
+    .systems-grid,
+    .holocrons-grid,
+    .side-missions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rebellion-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .rebellion-title {
+        font-size: 1.75rem;
+    }
+
+    .rebellion-actions {
+        flex-direction: column;
     }
 
     .theme-nav {
