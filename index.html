@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ünsal Aslan - Tech Lead & Full Stack Developer with 17+ years of experience. Level 17 Developer ready for the next quest.">
+    <meta name="keywords" content="Ünsal Aslan, Tech Lead, Full Stack Developer, Istanbul, Software Engineer">
+    <meta name="author" content="Ünsal Aslan">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ünsal Aslan | Level 17 Tech Lead">
+    <meta property="og:description" content="40+ Enterprise Systems Conquered. Ready for the next quest?">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unsalaslan.me">
+
+    <title>Ünsal Aslan | Level 17 Tech Lead 🎮</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-icon">⚔️</div>
+            <h2 class="loading-title">Spawning Developer...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading 17 years of experience...</p>
+            <div class="loading-stats">
+                <span>☕ Coffee: 18,615 cups</span>
+                <span>🐛 Bugs Squashed: ∞</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Achievement Toast -->
+    <div id="achievement-toast" class="achievement-toast">
+        <span class="achievement-icon">🏆</span>
+        <div class="achievement-text">
+            <span class="achievement-label">Achievement Unlocked!</span>
+            <span class="achievement-name"></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="logo-bracket">{</span>
+            <span class="logo-text">ÜA</span>
+            <span class="logo-bracket">}</span>
+        </div>
+        <div class="nav-links">
+            <a href="#quest-log" class="nav-link">Quests</a>
+            <a href="#abilities" class="nav-link">Abilities</a>
+            <a href="#raids" class="nav-link">Raids</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
+            <a href="#contact" class="nav-link nav-cta">🎮 Start Co-op</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#quest-log" class="mobile-link">⚔️ Quests</a>
+        <a href="#abilities" class="mobile-link">⭐ Abilities</a>
+        <a href="#raids" class="mobile-link">🏰 Raids</a>
+        <a href="#achievements" class="mobile-link">🏆 Achievements</a>
+        <a href="#contact" class="mobile-link cta">🎮 Start Co-op</a>
+    </div>
+
+    <main>
+        <!-- Hero Section - Character Card -->
+        <section id="hero" class="hero">
+            <div class="hero-bg">
+                <div class="grid-pattern"></div>
+                <div class="floating-particles" id="particles"></div>
+            </div>
+
+            <div class="character-card fade-in">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <span class="terminal-title">player_stats.sh</span>
+                </div>
+
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command typing" id="typing-command">whoami</span>
+                    </div>
+
+                    <div class="player-info" id="player-info">
+                        <h1 class="player-name">Ünsal Aslan</h1>
+                        <p class="player-class">Tech Lead <span class="separator">|</span> Level 17 <span
+                                class="separator">|</span> Full Stack Class</p>
+                        <p class="player-location">📍 Istanbul_Server <span class="online-indicator">● Online</span></p>
+                    </div>
+
+                    <div class="status-bars" id="status-bars">
+                        <div class="stat-bar">
+                            <span class="stat-label">HP</span>
+                            <div class="bar hp-bar">
+                                <div class="bar-fill" data-value="100"></div>
+                            </div>
+                            <span class="stat-value">∞</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">XP</span>
+                            <div class="bar xp-bar">
+                                <div class="bar-fill" data-value="100"></div>
+                            </div>
+                            <span class="stat-value" id="xp-counter">17 yr</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">☕</span>
+                            <div class="bar coffee-bar">
+                                <div class="bar-fill critical" data-value="15"></div>
+                            </div>
+                            <span class="stat-value critical-text">CRITICAL</span>
+                        </div>
+                    </div>
+
+                    <div class="quick-stats">
+                        <div class="quick-stat">
+                            <span class="stat-number" data-count="40">0</span>
+                            <span class="stat-desc">Systems Built</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-number" data-count="17">0</span>
+                            <span class="stat-desc">Years Active</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-desc">Degrees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </section>
+
+        <!-- Quest Log - Career Timeline -->
+        <section id="quest-log" class="section quest-log">
+            <div class="section-header fade-in">
+                <span class="section-label">// Career Path</span>
+                <h2 class="section-title">Quest Log</h2>
+                <p class="section-subtitle">Main storyline progress</p>
+            </div>
+
+            <div class="timeline">
+                <div class="quest-card main-quest fade-in">
+                    <div class="quest-icon">⚔️</div>
+                    <div class="quest-content">
+                        <div class="quest-header">
+                            <span class="quest-type">MAIN QUEST</span>
+                            <span class="quest-period">2020 - Present</span>
+                        </div>
+                        <h3 class="quest-title">Lead the Engineering Legion</h3>
+                        <p class="quest-company">Istanbul University</p>
+                        <p class="quest-desc">Architecting scalable solutions, mentoring developers, driving technical
+                            strategy across 40+ enterprise systems.</p>
+                        <div class="quest-rewards">
+                            <span class="xp-badge">+5000 XP</span>
+                            <span class="role-badge">Tech Lead</span>
+                        </div>
+                        <div class="quest-progress">
+                            <div class="quest-bar">
+                                <div class="quest-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="quest-status">IN PROGRESS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quest-card legendary-quest fade-in">
+                    <div class="quest-icon">🚀</div>
+                    <div class="quest-content">
+                        <div class="quest-header">
+                            <span class="quest-type legendary">LEGENDARY VENTURE</span>
+                            <span class="quest-period">2024 - Present</span>
+                        </div>
+                        <h3 class="quest-title">Build the Commerce Kingdom</h3>
+                        <p class="quest-company"><a href="https://www.d-s28.com" target="_blank"
+                                class="quest-link">d-s28.com</a></p>
+                        <p class="quest-desc">Co-founded e-commerce platform. Building the future of online commerce as
+                            CTO & Co-Founder.</p>
+                        <div class="quest-rewards">
+                            <span class="xp-badge legendary">+∞ XP</span>
+                            <span class="role-badge legendary">CTO & Co-Founder</span>
+                        </div>
+                        <div class="quest-progress">
+                            <div class="quest-bar">
+                                <div class="quest-fill" style="width: 30%"></div>
+                            </div>
+                            <span class="quest-status">IN PROGRESS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quest-card fade-in">
+                    <div class="quest-icon">🗡️</div>
+                    <div class="quest-content">
+                        <div class="quest-header">
+                            <span class="quest-type">SIDE QUEST</span>
+                            <span class="quest-period">2015 - 2020</span>
+                        </div>
+                        <h3 class="quest-title">Assemble the Fellowship</h3>
+                        <p class="quest-company">Software Development Teams</p>
+                        <p class="quest-desc">Led cross-functional teams, established best practices, built continuous
+                            improvement culture.</p>
+                        <div class="quest-rewards">
+                            <span class="xp-badge">+3000 XP</span>
+                            <span class="role-badge">Team Leader</span>
+                        </div>
+                        <div class="quest-progress">
+                            <div class="quest-bar">
+                                <div class="quest-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="quest-status completed">COMPLETED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quest-card fade-in">
+                    <div class="quest-icon">🎯</div>
+                    <div class="quest-content">
+                        <div class="quest-header">
+                            <span class="quest-type">SIDE QUEST</span>
+                            <span class="quest-period">2010 - 2015</span>
+                        </div>
+                        <h3 class="quest-title">Code Warrior Training</h3>
+                        <p class="quest-company">Various Projects</p>
+                        <p class="quest-desc">Full-stack development, web applications, mobile solutions. Mastering the
+                            craft.</p>
+                        <div class="quest-rewards">
+                            <span class="xp-badge">+2000 XP</span>
+                            <span class="role-badge">Developer</span>
+                        </div>
+                        <div class="quest-progress">
+                            <div class="quest-bar">
+                                <div class="quest-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="quest-status completed">COMPLETED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quest-card fade-in">
+                    <div class="quest-icon">🌟</div>
+                    <div class="quest-content">
+                        <div class="quest-header">
+                            <span class="quest-type">ORIGIN QUEST</span>
+                            <span class="quest-period">2008 - 2010</span>
+                        </div>
+                        <h3 class="quest-title">The Beginning</h3>
+                        <p class="quest-company">Enko Teknik - Sakarya</p>
+                        <p class="quest-desc">First steps in the industry. Software solutions for research. Outsource
+                            projects at TOYOTA.</p>
+                        <div class="quest-rewards">
+                            <span class="xp-badge">+1000 XP</span>
+                            <span class="role-badge">Software Developer</span>
+                        </div>
+                        <div class="quest-progress">
+                            <div class="quest-bar">
+                                <div class="quest-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="quest-status completed">COMPLETED</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abilities - Skills Section -->
+        <section id="abilities" class="section abilities">
+            <div class="section-header fade-in">
+                <span class="section-label">// Skill Matrix</span>
+                <h2 class="section-title">Ability Stats</h2>
+                <p class="section-subtitle">Unlocked powers and mastery levels</p>
+            </div>
+
+            <div class="abilities-grid">
+                <div class="ability-card fade-in">
+                    <div class="ability-header">
+                        <span class="ability-icon">⚡</span>
+                        <h3 class="ability-name">Frontend</h3>
+                        <span class="ability-level">Lv. MAX</span>
+                    </div>
+                    <div class="ability-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="ability-bar">
+                        <div class="ability-fill" data-value="100"></div>
+                    </div>
+                    <div class="ability-skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                    </div>
+                </div>
+
+                <div class="ability-card fade-in">
+                    <div class="ability-header">
+                        <span class="ability-icon">🔮</span>
+                        <h3 class="ability-name">Backend</h3>
+                        <span class="ability-level">Lv. MAX</span>
+                    </div>
+                    <div class="ability-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="ability-bar">
+                        <div class="ability-fill" data-value="100"></div>
+                    </div>
+                    <div class="ability-skills">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="ability-card fade-in">
+                    <div class="ability-header">
+                        <span class="ability-icon">📱</span>
+                        <h3 class="ability-name">Mobile</h3>
+                        <span class="ability-level">Lv. 85</span>
+                    </div>
+                    <div class="ability-stars">⭐⭐⭐⭐</div>
+                    <div class="ability-bar">
+                        <div class="ability-fill" data-value="85"></div>
+                    </div>
+                    <div class="ability-skills">
+                        <span class="skill-tag">Swift</span>
+                        <span class="skill-tag">iOS</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Flutter</span>
+                    </div>
+                </div>
+
+                <div class="ability-card fade-in">
+                    <div class="ability-header">
+                        <span class="ability-icon">☁️</span>
+                        <h3 class="ability-name">Cloud & DevOps</h3>
+                        <span class="ability-level">Lv. 90</span>
+                    </div>
+                    <div class="ability-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="ability-bar">
+                        <div class="ability-fill" data-value="90"></div>
+                    </div>
+                    <div class="ability-skills">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+
+                <div class="ability-card fade-in">
+                    <div class="ability-header">
+                        <span class="ability-icon">🗄️</span>
+                        <h3 class="ability-name">Database</h3>
+                        <span class="ability-level">Lv. MAX</span>
+                    </div>
+                    <div class="ability-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="ability-bar">
+                        <div class="ability-fill" data-value="100"></div>
+                    </div>
+                    <div class="ability-skills">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">SQL Server</span>
+                    </div>
+                </div>
+
+                <div class="ability-card fade-in">
+                    <div class="ability-header">
+                        <span class="ability-icon">👑</span>
+                        <h3 class="ability-name">Leadership</h3>
+                        <span class="ability-level">Lv. MAX</span>
+                    </div>
+                    <div class="ability-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="ability-bar">
+                        <div class="ability-fill" data-value="100"></div>
+                    </div>
+                    <div class="ability-skills">
+                        <span class="skill-tag">Team Management</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Code Review</span>
+                        <span class="skill-tag">Mentoring</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Raid Dungeons - Istanbul University Projects -->
+        <section id="raids" class="section raids">
+            <div class="section-header fade-in">
+                <span class="section-label">// Battle Record</span>
+                <h2 class="section-title">Raid Dungeons</h2>
+                <p class="section-subtitle">Istanbul University Epic Campaigns — 40+ Enterprise Systems</p>
+            </div>
+
+            <div class="raids-grid">
+                <div class="raid-card fade-in">
+                    <div class="raid-header">
+                        <span class="raid-icon">🏛️</span>
+                        <h3 class="raid-name">Academic Realm</h3>
+                        <span class="raid-count">8 Bosses</span>
+                    </div>
+                    <div class="raid-bosses">
+                        <span class="boss-tag">OBS V2</span>
+                        <span class="boss-tag">AKSİS</span>
+                        <span class="boss-tag">Başvuru</span>
+                        <span class="boss-tag">PBYS</span>
+                        <span class="boss-tag">Hazırlık</span>
+                        <span class="boss-tag">YÖS</span>
+                        <span class="boss-tag">OSS</span>
+                        <span class="boss-tag">SEM</span>
+                    </div>
+                    <div class="raid-status defeated">ALL DEFEATED</div>
+                </div>
+
+                <div class="raid-card fade-in">
+                    <div class="raid-header">
+                        <span class="raid-icon">👥</span>
+                        <h3 class="raid-name">Personnel Domain</h3>
+                        <span class="raid-count">6 Bosses</span>
+                    </div>
+                    <div class="raid-bosses">
+                        <span class="boss-tag">Personel Portal</span>
+                        <span class="boss-tag">PWS</span>
+                        <span class="boss-tag">IDM</span>
+                        <span class="boss-tag">PDKS</span>
+                        <span class="boss-tag">PDRS</span>
+                        <span class="boss-tag">ATS</span>
+                    </div>
+                    <div class="raid-status defeated">ALL DEFEATED</div>
+                </div>
+
+                <div class="raid-card fade-in">
+                    <div class="raid-header">
+                        <span class="raid-icon">🔐</span>
+                        <h3 class="raid-name">Security Fortress</h3>
+                        <span class="raid-count">4 Bosses</span>
+                    </div>
+                    <div class="raid-bosses">
+                        <span class="boss-tag legendary">SSO-İU GİRİŞ</span>
+                        <span class="boss-tag">E-Devlet</span>
+                        <span class="boss-tag">Mernis</span>
+                        <span class="boss-tag">Log Projesi</span>
+                    </div>
+                    <div class="raid-status defeated">ALL DEFEATED</div>
+                </div>
+
+                <div class="raid-card fade-in">
+                    <div class="raid-header">
+                        <span class="raid-icon">💰</span>
+                        <h3 class="raid-name">Finance Guild</h3>
+                        <span class="raid-count">7 Bosses</span>
+                    </div>
+                    <div class="raid-bosses">
+                        <span class="boss-tag legendary">Sanal POS v2</span>
+                        <span class="boss-tag">Sanal POS</span>
+                        <span class="boss-tag">KİP v2</span>
+                        <span class="boss-tag">KİP</span>
+                        <span class="boss-tag">Kalite</span>
+                        <span class="boss-tag">Patent</span>
+                        <span class="boss-tag">KDS</span>
+                    </div>
+                    <div class="raid-status defeated">ALL DEFEATED</div>
+                </div>
+
+                <div class="raid-card fade-in">
+                    <div class="raid-header">
+                        <span class="raid-icon">🏥</span>
+                        <h3 class="raid-name">Medical Wing</h3>
+                        <span class="raid-count">3 Bosses</span>
+                    </div>
+                    <div class="raid-bosses">
+                        <span class="boss-tag">Etik Kurul</span>
+                        <span class="boss-tag">Klinik Araştırmalar</span>
+                        <span class="boss-tag">Bilimsel Görüş</span>
+                    </div>
+                    <div class="raid-status defeated">ALL DEFEATED</div>
+                </div>
+
+                <div class="raid-card fade-in">
+                    <div class="raid-header">
+                        <span class="raid-icon">📱</span>
+                        <h3 class="raid-name">Modern Era</h3>
+                        <span class="raid-count">5 Bosses</span>
+                    </div>
+                    <div class="raid-bosses">
+                        <span class="boss-tag legendary">İU Mobil</span>
+                        <span class="boss-tag">Mobil Admin</span>
+                        <span class="boss-tag">CMS</span>
+                        <span class="boss-tag">İU Press</span>
+                        <span class="boss-tag">Mezun</span>
+                    </div>
+                    <div class="raid-status defeated">ALL DEFEATED</div>
+                </div>
+
+                <div class="raid-card wide fade-in">
+                    <div class="raid-header">
+                        <span class="raid-icon">⚔️</span>
+                        <h3 class="raid-name">Legendary Raids</h3>
+                        <span class="raid-count">7+ Bosses</span>
+                    </div>
+                    <div class="raid-bosses">
+                        <span class="boss-tag legendary">EBYS</span>
+                        <span class="boss-tag legendary">SYBS</span>
+                        <span class="boss-tag">Protokoller</span>
+                        <span class="boss-tag">Mekan Yönetim</span>
+                        <span class="boss-tag">STF</span>
+                        <span class="boss-tag">SES</span>
+                        <span class="boss-tag">Arlab V2</span>
+                        <span class="boss-tag">KSPYS</span>
+                        <span class="boss-tag">Enez</span>
+                    </div>
+                    <div class="raid-status defeated">ALL DEFEATED</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section achievements">
+            <div class="section-header fade-in">
+                <span class="section-label">// Hall of Fame</span>
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Unlocked badges and milestones</p>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-card fade-in" data-achievement="University Guardian">
+                    <div class="achievement-badge">🎓</div>
+                    <h4 class="achievement-title">University Guardian</h4>
+                    <p class="achievement-desc">Built 40+ enterprise systems at İstanbul University</p>
+                    <span class="achievement-rarity legendary">LEGENDARY</span>
+                </div>
+
+                <div class="achievement-card fade-in" data-achievement="First Blood">
+                    <div class="achievement-badge">🏆</div>
+                    <h4 class="achievement-title">First Blood</h4>
+                    <p class="achievement-desc">Shipped first production code in 2008</p>
+                    <span class="achievement-rarity epic">EPIC</span>
+                </div>
+
+                <div class="achievement-card fade-in" data-achievement="Triple Scholar">
+                    <div class="achievement-badge">📚</div>
+                    <h4 class="achievement-title">Triple Scholar</h4>
+                    <p class="achievement-desc">BSc Math + BSc CS + MSc Engineering</p>
+                    <span class="achievement-rarity legendary">LEGENDARY</span>
+                </div>
+
+                <div class="achievement-card fade-in" data-achievement="Commander">
+                    <div class="achievement-badge">👑</div>
+                    <h4 class="achievement-title">Commander</h4>
+                    <p class="achievement-desc">Led development teams as Tech Lead</p>
+                    <span class="achievement-rarity epic">EPIC</span>
+                </div>
+
+                <div class="achievement-card fade-in" data-achievement="Gatekeeper">
+                    <div class="achievement-badge">🔐</div>
+                    <h4 class="achievement-title">Gatekeeper</h4>
+                    <p class="achievement-desc">Architected SSO & Identity systems</p>
+                    <span class="achievement-rarity rare">RARE</span>
+                </div>
+
+                <div class="achievement-card fade-in" data-achievement="Treasurer">
+                    <div class="achievement-badge">💳</div>
+                    <h4 class="achievement-title">Treasurer</h4>
+                    <p class="achievement-desc">Developed Sanal POS payment systems</p>
+                    <span class="achievement-rarity rare">RARE</span>
+                </div>
+
+                <div class="achievement-card fade-in" data-achievement="Mobile Master">
+                    <div class="achievement-badge">📱</div>
+                    <h4 class="achievement-title">Mobile Master</h4>
+                    <p class="achievement-desc">Launched İU Mobile & Admin platforms</p>
+                    <span class="achievement-rarity epic">EPIC</span>
+                </div>
+
+                <div class="achievement-card fade-in" data-achievement="Bug Slayer">
+                    <div class="achievement-badge">🐛</div>
+                    <h4 class="achievement-title">Bug Slayer</h4>
+                    <p class="achievement-desc">Resolved 10,000+ issues across systems</p>
+                    <span class="achievement-rarity epic">EPIC</span>
+                </div>
+
+                <div class="achievement-card fade-in" data-achievement="Caffeine Addict">
+                    <div class="achievement-badge">☕</div>
+                    <h4 class="achievement-title">Caffeine Addict</h4>
+                    <p class="achievement-desc">Consumed 18,615+ cups of coffee</p>
+                    <span class="achievement-rarity common">COMMON</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Origin Story - Education -->
+        <section id="origin" class="section origin">
+            <div class="section-header fade-in">
+                <span class="section-label">// Backstory</span>
+                <h2 class="section-title">Origin Story</h2>
+                <p class="section-subtitle">How the legend began</p>
+            </div>
+
+            <div class="origin-scroll fade-in">
+                <div class="scroll-decoration">📜</div>
+                <div class="origin-content">
+                    <p class="origin-text">
+                        <em>"In the ancient halls of Mathematics, a young warrior first learned the power of logic and
+                            numbers.
+                            Seeking greater knowledge, he journeyed to the realm of Computer Science, where he mastered
+                            the arcane arts of algorithms and data structures. Finally, ascending to the pinnacle of
+                            Computer Engineering, he forged the skills to build worlds of code..."</em>
+                    </p>
+                </div>
+            </div>
+
+            <div class="education-cards">
+                <div class="education-card fade-in">
+                    <div class="edu-icon">🎓</div>
+                    <h4 class="edu-degree">Master's Degree</h4>
+                    <p class="edu-field">Computer Engineering</p>
+                    <p class="edu-focus">Systems and Software Architecture</p>
+                    <div class="edu-badge">Ultimate Power Unlocked</div>
+                </div>
+
+                <div class="education-card fade-in">
+                    <div class="edu-icon">💻</div>
+                    <h4 class="edu-degree">Bachelor's Degree</h4>
+                    <p class="edu-field">Computer Science</p>
+                    <p class="edu-focus">Algorithms & Data Structures</p>
+                    <div class="edu-badge">Core Abilities Gained</div>
+                </div>
+
+                <div class="education-card fade-in">
+                    <div class="edu-icon">∑</div>
+                    <h4 class="edu-degree">Bachelor's Degree</h4>
+                    <p class="edu-field">Mathematics</p>
+                    <p class="edu-focus">Logic & Problem Solving</p>
+                    <div class="edu-badge">Foundation Skills</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open University - Life Quest Featured -->
+        <section id="life-quest" class="section life-quest">
+            <div class="section-header fade-in">
+                <span class="section-label">// The Ultimate Goal</span>
+                <h2 class="section-title">Life Quest</h2>
+                <p class="section-subtitle">A personal mission to democratize education</p>
+            </div>
+
+            <div class="featured-project fade-in">
+                <div class="featured-glow"></div>
+                <div class="featured-content">
+                    <div class="featured-badge">🌟 OPEN SOURCE</div>
+                    <h3 class="featured-title">Open University</h3>
+                    <p class="featured-tagline">"Education should be free and accessible to everyone."</p>
+                    <p class="featured-desc">
+                        This is more than a project — it's my life's mission. Open University is a completely
+                        open-source
+                        platform designed to make quality education accessible to everyone, everywhere.
+                        Built with modern technologies and a passion for learning.
+                    </p>
+                    <div class="featured-tech">
+                        <span>TypeScript</span>
+                        <span>Angular</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>.NET Core</span>
+                        <span>Azure</span>
+                    </div>
+                    <div class="featured-actions">
+                        <a href="https://github.com/dyamba/Open-University" target="_blank"
+                            class="featured-btn primary">
+                            ⭐ Star on GitHub
+                        </a>
+                        <a href="https://github.com/dyamba/Open-University" target="_blank"
+                            class="featured-btn secondary">
+                            🔍 Explore Project
+                        </a>
+                    </div>
+                    <p class="featured-cta">Want to contribute? Let's build the future of education together! 🚀</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Side Projects - GitHub -->
+        <section id="side-quests" class="section side-quests">
+            <div class="section-header fade-in">
+                <span class="section-label">// After Hours & Coming Soon</span>
+                <h2 class="section-title">Side Quests</h2>
+                <p class="section-subtitle">Personal projects, experiments & upcoming adventures</p>
+            </div>
+
+            <div class="projects-grid">
+                <a href="https://github.com/dyamba/Open-University" target="_blank" class="project-card fade-in">
+                    <div class="project-icon">🎓</div>
+                    <h4 class="project-name">OpenUniversity</h4>
+                    <p class="project-desc">Open University platform</p>
+                    <div class="project-tech">
+                        <span>TypeScript</span>
+                        <span>Angular</span>
+                        <span>.NET</span>
+                        <span>Azure</span>
+                    </div>
+                    <span class="project-link">View Loot →</span>
+                </a>
+
+                <div class="project-card upcoming fade-in">
+                    <div class="project-icon">📊</div>
+                    <div class="upcoming-badge">COMING SOON</div>
+                    <h4 class="project-name">Learning Tracker</h4>
+                    <p class="project-desc">A comprehensive learning tracking system to monitor progress and goals</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <span class="project-link upcoming">In Development 🔨</span>
+                </div>
+
+                <div class="project-card upcoming fade-in">
+                    <div class="project-icon">📚</div>
+                    <div class="upcoming-badge">COMING SOON</div>
+                    <h4 class="project-name">Niche Academy</h4>
+                    <p class="project-desc">E-learning platform for a specialized niche concept</p>
+                    <div class="project-tech">
+                        <span>Next.js</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind</span>
+                    </div>
+                    <span class="project-link upcoming">In Development 🔨</span>
+                </div>
+
+                <a href="https://github.com/dyamba/skillshop" target="_blank" class="project-card fade-in">
+                    <div class="project-icon">🛒</div>
+                    <h4 class="project-name">SkillShop</h4>
+                    <p class="project-desc">E-commerce for skill-based services</p>
+                    <div class="project-tech">
+                        <span>TypeScript</span>
+                        <span>React</span>
+                    </div>
+                    <span class="project-link">View Loot →</span>
+                </a>
+
+                <a href="https://github.com/dyamba/PitchPerfect" target="_blank" class="project-card fade-in">
+                    <div class="project-icon">🎵</div>
+                    <h4 class="project-name">PitchPerfect</h4>
+                    <p class="project-desc">iOS audio recording with effects</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>iOS</span>
+                        <span>AVFoundation</span>
+                    </div>
+                    <span class="project-link">View Loot →</span>
+                </a>
+
+                <a href="https://github.com/dyamba/IOS-Playground" target="_blank" class="project-card fade-in">
+                    <div class="project-icon">🎮</div>
+                    <h4 class="project-name">iOS Playground</h4>
+                    <p class="project-desc">iOS test applications</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>iOS</span>
+                    </div>
+                    <span class="project-link">View Loot →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="section-header fade-in">
+                <span class="section-label">// New Game+</span>
+                <h2 class="section-title">Start Co-op</h2>
+                <p class="section-subtitle">Ready to team up for the next adventure?</p>
+            </div>
+
+            <div class="contact-content fade-in">
+                <div class="contact-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <span class="terminal-title">contact.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line"><span class="prompt">$</span> hire --developer "Ünsal Aslan"</p>
+                        <p class="terminal-response">✓ Request received! Initiating contact sequence...</p>
+                        <p class="terminal-line"><span class="prompt">$</span> Available channels:</p>
+                    </div>
+                </div>
+
+                <div class="contact-links">
+                    <a href="mailto:contact@unsalaslan.me" class="contact-link email">
+                        <span class="link-icon">📧</span>
+                        <span class="link-text">contact@unsalaslan.me</span>
+                    </a>
+                    <a href="https://github.com/dyamba" target="_blank" class="contact-link github">
+                        <span class="link-icon">🐙</span>
+                        <span class="link-text">github.com/dyamba</span>
+                    </a>
+                    <a href="https://linkedin.com/in/unsalaslan" target="_blank" class="contact-link linkedin">
+                        <span class="link-icon">💼</span>
+                        <span class="link-text">linkedin.com/in/unsalaslan</span>
+                    </a>
+                </div>
+
+                <p class="contact-cta">
+                    <span class="cta-text">Player 2 has entered the lobby.</span>
+                    <span class="cta-subtext">Press START to begin your quest together.</span>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                <span class="footer-code">&lt;/&gt;</span>
+                Built with passion && precision by
+                <span class="footer-name">Ünsal Aslan</span>
+            </p>
+            <p class="footer-hint">
+                <span class="konami-hint">↑↑↓↓←→←→BA</span>
+                <span class="hint-text">Try the Konami Code 🎮</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Konami Code Easter Egg Modal -->
+    <div id="easter-egg-modal" class="easter-egg-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="modal-title">🎮 Cheat Codes Activated!</h2>
+            <div class="cheat-codes">
+                <div class="cheat-code">
+                    <span class="code-key">IDDQD</span>
+                    <span class="code-desc">God Mode: Infinite patience for debugging</span>
+                </div>
+                <div class="cheat-code">
+                    <span class="code-key">IDKFA</span>
+                    <span class="code-desc">All Keys: Every programming language unlocked</span>
+                </div>
+                <div class="cheat-code">
+                    <span class="code-key">NOCLIP</span>
+                    <span class="code-desc">Walk through walls: No technical challenge too big</span>
+                </div>
+                <div class="cheat-code">
+                    <span class="code-key">MOTHERLODE</span>
+                    <span class="code-desc">Infinite resources: Unlimited coffee supply</span>
+                </div>
+            </div>
+            <p class="modal-footer">Fun fact: I still remember the cheat codes from my childhood games! 🕹️</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
