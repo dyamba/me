@@ -1491,9 +1491,27 @@ a {
     }
 
     .achievement-toast {
+        /* Position at bottom on mobile */
+        top: auto;
+        bottom: -100px;
         right: 10px;
         left: 10px;
         width: auto;
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .achievement-toast.show {
+        right: 10px;
+        bottom: 20px;
+    }
+
+    .achievement-icon {
+        font-size: 1.5rem;
+    }
+
+    .achievement-label {
+        font-size: 0.65rem;
     }
 }
 
@@ -1535,6 +1553,51 @@ a {
 ::selection {
     background: var(--accent);
     color: var(--bg-primary);
+}
+
+/* Theme Navigation */
+.theme-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 1000;
+}
+
+.theme-btn {
+    padding: 0.5rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--card-radius-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: var(--transition-fast);
+}
+
+.theme-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.theme-btn.active {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .theme-nav {
+        bottom: 10px;
+        left: 10px;
+        flex-direction: column;
+    }
+
+    .theme-btn {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.75rem;
+    }
 }
 
 /* Legendary Quest Styles */

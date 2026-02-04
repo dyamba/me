@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ünsal Aslan | Jedi Master Developer ⚔️</title>
+    <meta name="description"
+        content="A long time ago in a galaxy far, far away... A developer rose to become a Jedi Master of Code.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="starwars.css">
+</head>
+
+<body>
+    <div class="starfield"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <h2 class="loading-title">ENTERING HYPERSPACE...</h2>
+            <div class="hyperspace-lines"></div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero - Jedi Profile -->
+        <section class="crawl-container">
+            <div class="jedi-card crawl-text">
+                <p class="section-label">JEDI ARCHIVES • PERSONNEL FILE</p>
+                <h1 class="jedi-title">ÜNSAL ASLAN</h1>
+                <p class="jedi-rank">JEDI MASTER • LEVEL XVII • FULL STACK ORDER</p>
+
+                <div class="saber-stats">
+                    <div class="saber-bar">
+                        <span class="saber-label">FORCE POWER</span>
+                        <div class="saber-track">
+                            <div class="saber-fill" data-value="100" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="saber-bar">
+                        <span class="saber-label">EXPERIENCE</span>
+                        <div class="saber-track">
+                            <div class="saber-fill green" data-value="100" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="saber-bar">
+                        <span class="saber-label">MIDI-CHLORIANS</span>
+                        <div class="saber-track">
+                            <div class="saber-fill" data-value="85" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-around; margin-top: 2rem; color: var(--sw-gold);">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-family: var(--font-display);">40+</div>
+                        <div style="font-size: 0.7rem; color: var(--sw-gray);">SYSTEMS CONQUERED</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-family: var(--font-display);">17</div>
+                        <div style="font-size: 0.7rem; color: var(--sw-gray);">YEARS IN SERVICE</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-family: var(--font-display);">3</div>
+                        <div style="font-size: 0.7rem; color: var(--sw-gray);">HOLOCRONS MASTERED</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Log -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-label">// JEDI COUNCIL RECORDS</span>
+                <h2 class="section-title">MISSION LOG</h2>
+            </div>
+
+            <div class="mission-log">
+                <div class="mission-card">
+                    <span class="mission-type">◆ ACTIVE MISSION</span>
+                    <h3 class="mission-title">Lead the Jedi Council of Engineering</h3>
+                    <p class="mission-location">Istanbul University • Coruscant Sector</p>
+                    <p style="color: var(--sw-gray); margin-top: 0.5rem; font-size: 0.9rem;">
+                        Commanding 40+ star systems (enterprise applications). Training young Padawans in the ways of
+                        clean code.
+                    </p>
+                </div>
+
+                <div class="mission-card">
+                    <span class="mission-type">◆ LEGENDARY VENTURE</span>
+                    <h3 class="mission-title">Build the Commerce Empire</h3>
+                    <p class="mission-location"><a href="https://www.d-s28.com" target="_blank"
+                            style="color: var(--sw-gold);">d-s28.com</a> • Outer Rim</p>
+                    <p style="color: var(--sw-gray); margin-top: 0.5rem; font-size: 0.9rem;">
+                        CTO & Co-Founder. Building the future of galactic commerce.
+                    </p>
+                </div>
+
+                <div class="mission-card">
+                    <span class="mission-type">◆ COMPLETED CAMPAIGN</span>
+                    <h3 class="mission-title">Assemble the Rebel Alliance</h3>
+                    <p class="mission-location">Development Teams • 2015 - 2020</p>
+                    <p style="color: var(--sw-gray); margin-top: 0.5rem; font-size: 0.9rem;">
+                        Led cross-functional squadrons. Established best practices. Built continuous improvement
+                        culture.
+                    </p>
+                </div>
+
+                <div class="mission-card">
+                    <span class="mission-type">◆ ORIGIN STORY</span>
+                    <h3 class="mission-title">The Padawan Years</h3>
+                    <p class="mission-location">Enko Teknik • Sakarya System • 2008</p>
+                    <p style="color: var(--sw-gray); margin-top: 0.5rem; font-size: 0.9rem;">
+                        First steps into a larger world. Discovered the Force of programming.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Force Powers -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-label">// FORCE ABILITIES</span>
+                <h2 class="section-title">POWERS MASTERED</h2>
+            </div>
+
+            <div class="powers-grid">
+                <div class="power-card">
+                    <div class="power-icon">⚡</div>
+                    <h3 class="power-name">FORCE FRONTEND</h3>
+                    <p class="power-level">MASTER LEVEL</p>
+                    <p style="color: var(--sw-gray); font-size: 0.8rem;">React • TypeScript • Vue.js • Angular</p>
+                </div>
+
+                <div class="power-card">
+                    <div class="power-icon">🔮</div>
+                    <h3 class="power-name">FORCE BACKEND</h3>
+                    <p class="power-level">MASTER LEVEL</p>
+                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Node.js • .NET • Java • Python</p>
+                </div>
+
+                <div class="power-card">
+                    <div class="power-icon">📱</div>
+                    <h3 class="power-name">FORCE MOBILE</h3>
+                    <p class="power-level">KNIGHT LEVEL</p>
+                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Swift • iOS • React Native • Flutter</p>
+                </div>
+
+                <div class="power-card">
+                    <div class="power-icon">☁️</div>
+                    <h3 class="power-name">FORCE CLOUD</h3>
+                    <p class="power-level">MASTER LEVEL</p>
+                    <p style="color: var(--sw-gray); font-size: 0.8rem;">AWS • Azure • Docker • Kubernetes</p>
+                </div>
+
+                <div class="power-card">
+                    <div class="power-icon">🗄️</div>
+                    <h3 class="power-name">FORCE DATA</h3>
+                    <p class="power-level">MASTER LEVEL</p>
+                    <p style="color: var(--sw-gray); font-size: 0.8rem;">PostgreSQL • MongoDB • Redis • SQL Server</p>
+                </div>
+
+                <div class="power-card">
+                    <div class="power-icon">👑</div>
+                    <h3 class="power-name">FORCE LEADERSHIP</h3>
+                    <p class="power-level">GRAND MASTER</p>
+                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Team Management • Agile • Mentoring</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Holocron Training -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-label">// JEDI ARCHIVES</span>
+                <h2 class="section-title">HOLOCRON TRAINING</h2>
+            </div>
+
+            <div class="powers-grid">
+                <div class="power-card">
+                    <div class="power-icon">🎓</div>
+                    <h3 class="power-name">MASTER'S HOLOCRON</h3>
+                    <p class="power-level">Computer Engineering</p>
+                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Systems and Software Architecture</p>
+                </div>
+
+                <div class="power-card">
+                    <div class="power-icon">💻</div>
+                    <h3 class="power-name">KNIGHT'S HOLOCRON</h3>
+                    <p class="power-level">Computer Science</p>
+                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Algorithms & Data Structures</p>
+                </div>
+
+                <div class="power-card">
+                    <div class="power-icon">∑</div>
+                    <h3 class="power-name">PADAWAN HOLOCRON</h3>
+                    <p class="power-level">Mathematics</p>
+                    <p style="color: var(--sw-gray); font-size: 0.8rem;">Logic & Problem Solving</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-label">// HOLOCOMMUNICATOR</span>
+                <h2 class="section-title">ESTABLISH CONTACT</h2>
+            </div>
+
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="color: var(--sw-gold); font-style: italic; font-size: 1.2rem; margin-bottom: 2rem;">
+                    "Do. Or do not. There is no try."
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="mailto:contact@unsalaslan.me" class="power-card" style="text-decoration: none;">
+                        <span style="font-size: 1.5rem;">📧</span>
+                        <span style="color: var(--sw-gold);">contact@unsalaslan.me</span>
+                    </a>
+                    <a href="https://github.com/dyamba" target="_blank" class="power-card"
+                        style="text-decoration: none;">
+                        <span style="font-size: 1.5rem;">🐙</span>
+                        <span style="color: var(--sw-gold);">github.com/dyamba</span>
+                    </a>
+                    <a href="https://linkedin.com/in/unsalaslan" target="_blank" class="power-card"
+                        style="text-decoration: none;">
+                        <span style="font-size: 1.5rem;">💼</span>
+                        <span style="color: var(--sw-gold);">linkedin.com/in/unsalaslan</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-quote">"May the Code be with you."</p>
+        <p>Built by Jedi Master Ünsal Aslan • A long time ago in a galaxy far, far away...</p>
+    </footer>
+
+    <!-- Theme Navigation -->
+    <nav class="theme-nav">
+        <a href="index.html" class="theme-btn">🎮 RPG</a>
+        <a href="starwars.html" class="theme-btn active">⚔️ Star Wars</a>
+        <a href="lotr.html" class="theme-btn">🧙 LOTR</a>
+    </nav>
+
+    <script>
+        // Hide loading screen
+        setTimeout(() => {
+            document.getElementById('loading-screen').classList.add('hidden');
+        }, 2000);
+    </script>
+</body>
+
+</html>

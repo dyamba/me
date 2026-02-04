@@ -1,0 +1,435 @@
+/* ===================================
+   Star Wars Theme - unsalaslan.me
+   =================================== */
+
+:root {
+    /* Star Wars Color Palette */
+    --sw-black: #0a0a0a;
+    --sw-dark: #1a1a2e;
+    --sw-gold: #ffe81f;
+    --sw-blue: #4fc3f7;
+    --sw-red: #ff4444;
+    --sw-green: #00ff00;
+    --sw-gray: #8b8b8b;
+    --sw-light: #e0e0e0;
+
+    /* Semantic Colors */
+    --bg-primary: var(--sw-black);
+    --bg-secondary: var(--sw-dark);
+    --bg-card: rgba(26, 26, 46, 0.9);
+    --accent: var(--sw-gold);
+    --accent-glow: rgba(255, 232, 31, 0.3);
+    --text-primary: var(--sw-light);
+    --text-secondary: var(--sw-gray);
+    --border-subtle: rgba(255, 232, 31, 0.2);
+
+    /* Lightsaber Colors */
+    --saber-jedi: var(--sw-blue);
+    --saber-sith: var(--sw-red);
+    --saber-yoda: var(--sw-green);
+
+    --font-main: 'JetBrains Mono', monospace;
+    --font-display: 'Orbitron', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Starfield Background */
+.starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, white, transparent),
+        radial-gradient(2px 2px at 160px 120px, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(1px 1px at 230px 80px, white, transparent),
+        radial-gradient(2px 2px at 300px 150px, rgba(255, 255, 255, 0.7), transparent);
+    background-repeat: repeat;
+    background-size: 350px 200px;
+    z-index: -1;
+    animation: twinkle 5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Loading Screen - Hyperspace */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--sw-gold);
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+}
+
+.hyperspace-lines {
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--sw-blue), var(--sw-gold), var(--sw-blue), transparent);
+    animation: hyperspace 1s ease-in-out infinite;
+}
+
+@keyframes hyperspace {
+    0% {
+        transform: scaleX(0.3);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(0.3);
+        opacity: 0.5;
+    }
+}
+
+/* Crawl Text Intro */
+.crawl-container {
+    perspective: 400px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.crawl-text {
+    font-family: var(--font-display);
+    color: var(--sw-gold);
+    text-align: center;
+    transform: rotateX(25deg);
+    animation: crawl 2s ease-out forwards;
+}
+
+@keyframes crawl {
+    from {
+        transform: rotateX(25deg) translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateX(25deg) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Character Card - Jedi Profile */
+.jedi-card {
+    background: var(--bg-card);
+    border: 2px solid var(--sw-gold);
+    border-radius: 0;
+    clip-path: polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px));
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.jedi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 40%, var(--accent-glow) 50%, transparent 60%);
+    animation: hologram 3s ease-in-out infinite;
+}
+
+@keyframes hologram {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.jedi-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--sw-gold);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.jedi-rank {
+    text-align: center;
+    color: var(--sw-blue);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+/* Lightsaber Stats */
+.saber-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.saber-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.saber-label {
+    width: 100px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.saber-track {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.saber-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--saber-jedi), white);
+    box-shadow: 0 0 20px var(--saber-jedi), 0 0 40px var(--saber-jedi);
+    width: 0%;
+    transition: width 1s ease-out;
+}
+
+.saber-fill.green {
+    background: linear-gradient(90deg, var(--saber-yoda), white);
+    box-shadow: 0 0 20px var(--saber-yoda), 0 0 40px var(--saber-yoda);
+}
+
+.saber-fill.red {
+    background: linear-gradient(90deg, var(--saber-sith), white);
+    box-shadow: 0 0 20px var(--saber-sith), 0 0 40px var(--saber-sith);
+}
+
+/* Section Styling */
+.section {
+    padding: 5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    color: var(--sw-blue);
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--sw-gold);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Mission Log - Timeline */
+.mission-log {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-card {
+    background: var(--bg-card);
+    border-left: 3px solid var(--sw-gold);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.mission-card::before {
+    content: '◆';
+    position: absolute;
+    left: -10px;
+    top: 1.5rem;
+    color: var(--sw-gold);
+    font-size: 1rem;
+}
+
+.mission-type {
+    font-size: 0.7rem;
+    color: var(--sw-blue);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.mission-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.mission-location {
+    color: var(--sw-gold);
+    font-size: 0.9rem;
+}
+
+/* Force Powers Grid */
+.powers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.power-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.power-card:hover {
+    border-color: var(--sw-gold);
+    box-shadow: 0 0 30px var(--accent-glow);
+    transform: translateY(-5px);
+}
+
+.power-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.power-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--sw-gold);
+    margin-bottom: 0.5rem;
+}
+
+.power-level {
+    font-size: 0.75rem;
+    color: var(--sw-blue);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.footer-quote {
+    font-style: italic;
+    color: var(--sw-gold);
+    margin-bottom: 0.5rem;
+}
+
+/* Theme Switcher */
+.theme-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 1000;
+}
+
+.theme-btn {
+    padding: 0.5rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.theme-btn.active {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .jedi-title {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        letter-spacing: 2px;
+    }
+
+    .theme-nav {
+        bottom: 10px;
+        left: 10px;
+        flex-direction: column;
+    }
+}
